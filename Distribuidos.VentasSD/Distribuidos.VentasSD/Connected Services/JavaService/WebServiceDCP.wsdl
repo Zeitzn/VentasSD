@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.digitalcorp.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WebServiceDCP" targetNamespace="http://services.digitalcorp.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://huaman-pc:8080/WebServiceDCP5167868445328778764/WebServiceDCP?xsd=1" namespace="http://services.digitalcorp.com/" />
+    </xsd:schema>
+  </types>
+  <message name="CategoriaMostrarAll">
+    <part name="parameters" element="tns:CategoriaMostrarAll" />
+  </message>
+  <message name="CategoriaMostrarAllResponse">
+    <part name="parameters" element="tns:CategoriaMostrarAllResponse" />
+  </message>
+  <message name="CategoriaRegistrar">
+    <part name="parameters" element="tns:CategoriaRegistrar" />
+  </message>
+  <message name="CategoriaRegistrarResponse">
+    <part name="parameters" element="tns:CategoriaRegistrarResponse" />
+  </message>
+  <message name="CategoriaActualizar">
+    <part name="parameters" element="tns:CategoriaActualizar" />
+  </message>
+  <message name="CategoriaActualizarResponse">
+    <part name="parameters" element="tns:CategoriaActualizarResponse" />
+  </message>
+  <message name="UsuarioActualizar">
+    <part name="parameters" element="tns:UsuarioActualizar" />
+  </message>
+  <message name="UsuarioActualizarResponse">
+    <part name="parameters" element="tns:UsuarioActualizarResponse" />
+  </message>
+  <message name="UsuarioMostrarAll">
+    <part name="parameters" element="tns:UsuarioMostrarAll" />
+  </message>
+  <message name="UsuarioMostrarAllResponse">
+    <part name="parameters" element="tns:UsuarioMostrarAllResponse" />
+  </message>
+  <message name="PersonaActualizar">
+    <part name="parameters" element="tns:PersonaActualizar" />
+  </message>
+  <message name="PersonaActualizarResponse">
+    <part name="parameters" element="tns:PersonaActualizarResponse" />
+  </message>
+  <message name="PersonaMostrarAll">
+    <part name="parameters" element="tns:PersonaMostrarAll" />
+  </message>
+  <message name="PersonaMostrarAllResponse">
+    <part name="parameters" element="tns:PersonaMostrarAllResponse" />
+  </message>
+  <message name="ProductoRegistrar">
+    <part name="parameters" element="tns:ProductoRegistrar" />
+  </message>
+  <message name="ProductoRegistrarResponse">
+    <part name="parameters" element="tns:ProductoRegistrarResponse" />
+  </message>
+  <message name="ProductoActualizar">
+    <part name="parameters" element="tns:ProductoActualizar" />
+  </message>
+  <message name="ProductoActualizarResponse">
+    <part name="parameters" element="tns:ProductoActualizarResponse" />
+  </message>
+  <message name="ProductoBuscarByCodName">
+    <part name="parameters" element="tns:ProductoBuscarByCodName" />
+  </message>
+  <message name="ProductoBuscarByCodNameResponse">
+    <part name="parameters" element="tns:ProductoBuscarByCodNameResponse" />
+  </message>
+  <message name="ProductoMostrarAll">
+    <part name="parameters" element="tns:ProductoMostrarAll" />
+  </message>
+  <message name="ProductoMostrarAllResponse">
+    <part name="parameters" element="tns:ProductoMostrarAllResponse" />
+  </message>
+  <message name="PersonaBuscarByAnyColumn">
+    <part name="parameters" element="tns:PersonaBuscarByAnyColumn" />
+  </message>
+  <message name="PersonaBuscarByAnyColumnResponse">
+    <part name="parameters" element="tns:PersonaBuscarByAnyColumnResponse" />
+  </message>
+  <message name="PersonaBuscarById">
+    <part name="parameters" element="tns:PersonaBuscarById" />
+  </message>
+  <message name="PersonaBuscarByIdResponse">
+    <part name="parameters" element="tns:PersonaBuscarByIdResponse" />
+  </message>
+  <message name="VentaBuscarByAnyClolumn">
+    <part name="parameters" element="tns:VentaBuscarByAnyClolumn" />
+  </message>
+  <message name="VentaBuscarByAnyClolumnResponse">
+    <part name="parameters" element="tns:VentaBuscarByAnyClolumnResponse" />
+  </message>
+  <message name="DetventaRegistrar">
+    <part name="parameters" element="tns:DetventaRegistrar" />
+  </message>
+  <message name="DetventaRegistrarResponse">
+    <part name="parameters" element="tns:DetventaRegistrarResponse" />
+  </message>
+  <message name="DetventaBuscarByFk_idventa">
+    <part name="parameters" element="tns:DetventaBuscarByFk_idventa" />
+  </message>
+  <message name="DetventaBuscarByFk_idventaResponse">
+    <part name="parameters" element="tns:DetventaBuscarByFk_idventaResponse" />
+  </message>
+  <message name="VerificarConexionAPostgres">
+    <part name="parameters" element="tns:VerificarConexionAPostgres" />
+  </message>
+  <message name="VerificarConexionAPostgresResponse">
+    <part name="parameters" element="tns:VerificarConexionAPostgresResponse" />
+  </message>
+  <message name="suma">
+    <part name="parameters" element="tns:suma" />
+  </message>
+  <message name="sumaResponse">
+    <part name="parameters" element="tns:sumaResponse" />
+  </message>
+  <message name="UsuarioRegistrar">
+    <part name="parameters" element="tns:UsuarioRegistrar" />
+  </message>
+  <message name="UsuarioRegistrarResponse">
+    <part name="parameters" element="tns:UsuarioRegistrarResponse" />
+  </message>
+  <message name="PersonaRegistrar">
+    <part name="parameters" element="tns:PersonaRegistrar" />
+  </message>
+  <message name="PersonaRegistrarResponse">
+    <part name="parameters" element="tns:PersonaRegistrarResponse" />
+  </message>
+  <message name="ProductoBuscar">
+    <part name="parameters" element="tns:ProductoBuscar" />
+  </message>
+  <message name="ProductoBuscarResponse">
+    <part name="parameters" element="tns:ProductoBuscarResponse" />
+  </message>
+  <message name="VentaRegistrar">
+    <part name="parameters" element="tns:VentaRegistrar" />
+  </message>
+  <message name="VentaRegistrarResponse">
+    <part name="parameters" element="tns:VentaRegistrarResponse" />
+  </message>
+  <message name="VentaMostrarAll">
+    <part name="parameters" element="tns:VentaMostrarAll" />
+  </message>
+  <message name="VentaMostrarAllResponse">
+    <part name="parameters" element="tns:VentaMostrarAllResponse" />
+  </message>
+  <message name="VentaBuscarById">
+    <part name="parameters" element="tns:VentaBuscarById" />
+  </message>
+  <message name="VentaBuscarByIdResponse">
+    <part name="parameters" element="tns:VentaBuscarByIdResponse" />
+  </message>
+  <portType name="WebServiceDCP">
+    <operation name="CategoriaMostrarAll">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/CategoriaMostrarAllRequest" message="tns:CategoriaMostrarAll" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/CategoriaMostrarAllResponse" message="tns:CategoriaMostrarAllResponse" />
+    </operation>
+    <operation name="CategoriaRegistrar">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/CategoriaRegistrarRequest" message="tns:CategoriaRegistrar" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/CategoriaRegistrarResponse" message="tns:CategoriaRegistrarResponse" />
+    </operation>
+    <operation name="CategoriaActualizar">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/CategoriaActualizarRequest" message="tns:CategoriaActualizar" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/CategoriaActualizarResponse" message="tns:CategoriaActualizarResponse" />
+    </operation>
+    <operation name="UsuarioActualizar">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/UsuarioActualizarRequest" message="tns:UsuarioActualizar" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/UsuarioActualizarResponse" message="tns:UsuarioActualizarResponse" />
+    </operation>
+    <operation name="UsuarioMostrarAll">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/UsuarioMostrarAllRequest" message="tns:UsuarioMostrarAll" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/UsuarioMostrarAllResponse" message="tns:UsuarioMostrarAllResponse" />
+    </operation>
+    <operation name="PersonaActualizar">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/PersonaActualizarRequest" message="tns:PersonaActualizar" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/PersonaActualizarResponse" message="tns:PersonaActualizarResponse" />
+    </operation>
+    <operation name="PersonaMostrarAll">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/PersonaMostrarAllRequest" message="tns:PersonaMostrarAll" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/PersonaMostrarAllResponse" message="tns:PersonaMostrarAllResponse" />
+    </operation>
+    <operation name="ProductoRegistrar">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoRegistrarRequest" message="tns:ProductoRegistrar" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoRegistrarResponse" message="tns:ProductoRegistrarResponse" />
+    </operation>
+    <operation name="ProductoActualizar">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoActualizarRequest" message="tns:ProductoActualizar" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoActualizarResponse" message="tns:ProductoActualizarResponse" />
+    </operation>
+    <operation name="ProductoBuscarByCodName">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByCodNameRequest" message="tns:ProductoBuscarByCodName" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByCodNameResponse" message="tns:ProductoBuscarByCodNameResponse" />
+    </operation>
+    <operation name="ProductoMostrarAll">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoMostrarAllRequest" message="tns:ProductoMostrarAll" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoMostrarAllResponse" message="tns:ProductoMostrarAllResponse" />
+    </operation>
+    <operation name="PersonaBuscarByAnyColumn">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/PersonaBuscarByAnyColumnRequest" message="tns:PersonaBuscarByAnyColumn" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/PersonaBuscarByAnyColumnResponse" message="tns:PersonaBuscarByAnyColumnResponse" />
+    </operation>
+    <operation name="PersonaBuscarById">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/PersonaBuscarByIdRequest" message="tns:PersonaBuscarById" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/PersonaBuscarByIdResponse" message="tns:PersonaBuscarByIdResponse" />
+    </operation>
+    <operation name="VentaBuscarByAnyClolumn">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaBuscarByAnyClolumnRequest" message="tns:VentaBuscarByAnyClolumn" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaBuscarByAnyClolumnResponse" message="tns:VentaBuscarByAnyClolumnResponse" />
+    </operation>
+    <operation name="DetventaRegistrar">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/DetventaRegistrarRequest" message="tns:DetventaRegistrar" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/DetventaRegistrarResponse" message="tns:DetventaRegistrarResponse" />
+    </operation>
+    <operation name="DetventaBuscarByFk_idventa">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/DetventaBuscarByFk_idventaRequest" message="tns:DetventaBuscarByFk_idventa" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/DetventaBuscarByFk_idventaResponse" message="tns:DetventaBuscarByFk_idventaResponse" />
+    </operation>
+    <operation name="VerificarConexionAPostgres">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VerificarConexionAPostgresRequest" message="tns:VerificarConexionAPostgres" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VerificarConexionAPostgresResponse" message="tns:VerificarConexionAPostgresResponse" />
+    </operation>
+    <operation name="suma">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/sumaRequest" message="tns:suma" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/sumaResponse" message="tns:sumaResponse" />
+    </operation>
+    <operation name="UsuarioRegistrar">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/UsuarioRegistrarRequest" message="tns:UsuarioRegistrar" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/UsuarioRegistrarResponse" message="tns:UsuarioRegistrarResponse" />
+    </operation>
+    <operation name="PersonaRegistrar">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/PersonaRegistrarRequest" message="tns:PersonaRegistrar" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/PersonaRegistrarResponse" message="tns:PersonaRegistrarResponse" />
+    </operation>
+    <operation name="ProductoBuscar">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarRequest" message="tns:ProductoBuscar" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarResponse" message="tns:ProductoBuscarResponse" />
+    </operation>
+    <operation name="VentaRegistrar">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaRegistrarRequest" message="tns:VentaRegistrar" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaRegistrarResponse" message="tns:VentaRegistrarResponse" />
+    </operation>
+    <operation name="VentaMostrarAll">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaMostrarAllRequest" message="tns:VentaMostrarAll" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaMostrarAllResponse" message="tns:VentaMostrarAllResponse" />
+    </operation>
+    <operation name="VentaBuscarById">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaBuscarByIdRequest" message="tns:VentaBuscarById" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaBuscarByIdResponse" message="tns:VentaBuscarByIdResponse" />
+    </operation>
+  </portType>
+  <binding name="WebServiceDCPPortBinding" type="tns:WebServiceDCP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="CategoriaMostrarAll">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CategoriaRegistrar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CategoriaActualizar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UsuarioActualizar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UsuarioMostrarAll">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PersonaActualizar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PersonaMostrarAll">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProductoRegistrar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProductoActualizar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProductoBuscarByCodName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProductoMostrarAll">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PersonaBuscarByAnyColumn">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PersonaBuscarById">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="VentaBuscarByAnyClolumn">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DetventaRegistrar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DetventaBuscarByFk_idventa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="VerificarConexionAPostgres">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="suma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UsuarioRegistrar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PersonaRegistrar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProductoBuscar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="VentaRegistrar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="VentaMostrarAll">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="VentaBuscarById">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WebServiceDCP">
+    <port name="WebServiceDCPPort" binding="tns:WebServiceDCPPortBinding">
+      <soap:address location="http://huaman-pc:8080/WebServiceDCP5167868445328778764/WebServiceDCP" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.digitalcorp.com/" targetNamespace="http://services.digitalcorp.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CategoriaActualizar" type="tns:CategoriaActualizar" />
+  <xs:element name="CategoriaActualizarResponse" type="tns:CategoriaActualizarResponse" />
+  <xs:element name="CategoriaMostrarAll" type="tns:CategoriaMostrarAll" />
+  <xs:element name="CategoriaMostrarAllResponse" type="tns:CategoriaMostrarAllResponse" />
+  <xs:element name="CategoriaRegistrar" type="tns:CategoriaRegistrar" />
+  <xs:element name="CategoriaRegistrarResponse" type="tns:CategoriaRegistrarResponse" />
+  <xs:element name="DetventaBuscarByFk_idventa" type="tns:DetventaBuscarByFk_idventa" />
+  <xs:element name="DetventaBuscarByFk_idventaResponse" type="tns:DetventaBuscarByFk_idventaResponse" />
+  <xs:element name="DetventaRegistrar" type="tns:DetventaRegistrar" />
+  <xs:element name="DetventaRegistrarResponse" type="tns:DetventaRegistrarResponse" />
+  <xs:element name="PersonaActualizar" type="tns:PersonaActualizar" />
+  <xs:element name="PersonaActualizarResponse" type="tns:PersonaActualizarResponse" />
+  <xs:element name="PersonaBuscarByAnyColumn" type="tns:PersonaBuscarByAnyColumn" />
+  <xs:element name="PersonaBuscarByAnyColumnResponse" type="tns:PersonaBuscarByAnyColumnResponse" />
+  <xs:element name="PersonaBuscarById" type="tns:PersonaBuscarById" />
+  <xs:element name="PersonaBuscarByIdResponse" type="tns:PersonaBuscarByIdResponse" />
+  <xs:element name="PersonaMostrarAll" type="tns:PersonaMostrarAll" />
+  <xs:element name="PersonaMostrarAllResponse" type="tns:PersonaMostrarAllResponse" />
+  <xs:element name="PersonaRegistrar" type="tns:PersonaRegistrar" />
+  <xs:element name="PersonaRegistrarResponse" type="tns:PersonaRegistrarResponse" />
+  <xs:element name="ProductoActualizar" type="tns:ProductoActualizar" />
+  <xs:element name="ProductoActualizarResponse" type="tns:ProductoActualizarResponse" />
+  <xs:element name="ProductoBuscar" type="tns:ProductoBuscar" />
+  <xs:element name="ProductoBuscarByCodName" type="tns:ProductoBuscarByCodName" />
+  <xs:element name="ProductoBuscarByCodNameResponse" type="tns:ProductoBuscarByCodNameResponse" />
+  <xs:element name="ProductoBuscarResponse" type="tns:ProductoBuscarResponse" />
+  <xs:element name="ProductoMostrarAll" type="tns:ProductoMostrarAll" />
+  <xs:element name="ProductoMostrarAllResponse" type="tns:ProductoMostrarAllResponse" />
+  <xs:element name="ProductoRegistrar" type="tns:ProductoRegistrar" />
+  <xs:element name="ProductoRegistrarResponse" type="tns:ProductoRegistrarResponse" />
+  <xs:element name="UsuarioActualizar" type="tns:UsuarioActualizar" />
+  <xs:element name="UsuarioActualizarResponse" type="tns:UsuarioActualizarResponse" />
+  <xs:element name="UsuarioMostrarAll" type="tns:UsuarioMostrarAll" />
+  <xs:element name="UsuarioMostrarAllResponse" type="tns:UsuarioMostrarAllResponse" />
+  <xs:element name="UsuarioRegistrar" type="tns:UsuarioRegistrar" />
+  <xs:element name="UsuarioRegistrarResponse" type="tns:UsuarioRegistrarResponse" />
+  <xs:element name="VentaBuscarByAnyClolumn" type="tns:VentaBuscarByAnyClolumn" />
+  <xs:element name="VentaBuscarByAnyClolumnResponse" type="tns:VentaBuscarByAnyClolumnResponse" />
+  <xs:element name="VentaBuscarById" type="tns:VentaBuscarById" />
+  <xs:element name="VentaBuscarByIdResponse" type="tns:VentaBuscarByIdResponse" />
+  <xs:element name="VentaMostrarAll" type="tns:VentaMostrarAll" />
+  <xs:element name="VentaMostrarAllResponse" type="tns:VentaMostrarAllResponse" />
+  <xs:element name="VentaRegistrar" type="tns:VentaRegistrar" />
+  <xs:element name="VentaRegistrarResponse" type="tns:VentaRegistrarResponse" />
+  <xs:element name="VerificarConexionAPostgres" type="tns:VerificarConexionAPostgres" />
+  <xs:element name="VerificarConexionAPostgresResponse" type="tns:VerificarConexionAPostgresResponse" />
+  <xs:element name="suma" type="tns:suma" />
+  <xs:element name="sumaResponse" type="tns:sumaResponse" />
+  <xs:complexType name="ProductoBuscarByCodName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cod_Name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductoBuscarByCodNameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element name="condicion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="fk_idcategoria" type="xs:int" />
+      <xs:element name="idproducto" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="stock" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VentaBuscarById">
+    <xs:sequence>
+      <xs:element name="idventa" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VentaBuscarByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:venta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="venta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="tns:timestamp" />
+      <xs:element name="fk_idcliente" type="xs:int" />
+      <xs:element name="fk_idusuario" type="xs:int" />
+      <xs:element name="idventa" type="xs:int" />
+      <xs:element minOccurs="0" name="igv" type="xs:decimal" />
+      <xs:element minOccurs="0" name="num_comp" type="xs:string" />
+      <xs:element minOccurs="0" name="serie_comp" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_comp" type="xs:string" />
+      <xs:element minOccurs="0" name="total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="timestamp">
+    <xs:sequence>
+      <xs:element name="nanos" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UsuarioMostrarAll">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="UsuarioMostrarAllResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cargo" type="xs:string" />
+      <xs:element name="condicion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element name="idusuario" type="xs:int" />
+      <xs:element minOccurs="0" name="login" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="num_doc" type="xs:string" />
+      <xs:element minOccurs="0" name="papellido" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" type="xs:string" />
+      <xs:element minOccurs="0" name="sapellido" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_doc" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonaBuscarByAnyColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nameColumn" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonaBuscarByAnyColumnResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element name="idpersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="num_doc" type="xs:string" />
+      <xs:element minOccurs="0" name="papellido" type="xs:string" />
+      <xs:element minOccurs="0" name="sapellido" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_doc" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_persona" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UsuarioRegistrar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="papellido" type="xs:string" />
+      <xs:element minOccurs="0" name="sapellido" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_doc" type="xs:string" />
+      <xs:element minOccurs="0" name="num_doc" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="cargo" type="xs:string" />
+      <xs:element minOccurs="0" name="login" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" type="xs:string" />
+      <xs:element name="condicion" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UsuarioRegistrarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="suma">
+    <xs:sequence>
+      <xs:element name="n1" type="xs:int" />
+      <xs:element name="n2" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sumaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonaRegistrar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tipo_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="papellido" type="xs:string" />
+      <xs:element minOccurs="0" name="sapellido" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_doc" type="xs:string" />
+      <xs:element minOccurs="0" name="num_doc" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonaRegistrarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CategoriaRegistrar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CategoriaRegistrarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonaBuscarById">
+    <xs:sequence>
+      <xs:element name="idpersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonaBuscarByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VerificarConexionAPostgres">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="VerificarConexionAPostgresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CategoriaActualizar">
+    <xs:sequence>
+      <xs:element name="idcategoria" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CategoriaActualizarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductoActualizar">
+    <xs:sequence>
+      <xs:element name="idproducto" type="xs:int" />
+      <xs:element name="fk_idcategoria" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="stock" type="xs:int" />
+      <xs:element name="condicion" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductoActualizarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VentaRegistrar">
+    <xs:sequence>
+      <xs:element name="fk_idcliente" type="xs:int" />
+      <xs:element name="fk_idusuario" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo_comp" type="xs:string" />
+      <xs:element minOccurs="0" name="serie_comp" type="xs:string" />
+      <xs:element minOccurs="0" name="num_comp" type="xs:string" />
+      <xs:element name="igv" type="xs:double" />
+      <xs:element name="total" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VentaRegistrarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UsuarioActualizar">
+    <xs:sequence>
+      <xs:element name="idusuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="papellido" type="xs:string" />
+      <xs:element minOccurs="0" name="sapellido" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_doc" type="xs:string" />
+      <xs:element minOccurs="0" name="num_doc" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="cargo" type="xs:string" />
+      <xs:element minOccurs="0" name="login" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" type="xs:string" />
+      <xs:element name="condicion" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UsuarioActualizarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonaMostrarAll">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="PersonaMostrarAllResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DetventaBuscarByFk_idventa">
+    <xs:sequence>
+      <xs:element name="fk_idventa" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DetventaBuscarByFk_idventaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:detventa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detventa">
+    <xs:sequence>
+      <xs:element name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="descuento" type="xs:decimal" />
+      <xs:element name="fk_idproducto" type="xs:int" />
+      <xs:element name="fk_idventa" type="xs:int" />
+      <xs:element name="iddetventa" type="xs:int" />
+      <xs:element minOccurs="0" name="precio" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductoBuscar">
+    <xs:sequence>
+      <xs:element name="idproducto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductoBuscarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DetventaRegistrar">
+    <xs:sequence>
+      <xs:element name="fk_idproducto" type="xs:int" />
+      <xs:element name="fk_idventa" type="xs:int" />
+      <xs:element name="cantidad" type="xs:int" />
+      <xs:element name="precio" type="xs:double" />
+      <xs:element name="descuento" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DetventaRegistrarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonaActualizar">
+    <xs:sequence>
+      <xs:element name="idpersona" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="papellido" type="xs:string" />
+      <xs:element minOccurs="0" name="sapellido" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_doc" type="xs:string" />
+      <xs:element minOccurs="0" name="num_doc" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonaActualizarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CategoriaMostrarAll">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="CategoriaMostrarAllResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:categoria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="categoria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductoMostrarAll">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ProductoMostrarAllResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VentaBuscarByAnyClolumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nameColumn" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VentaBuscarByAnyClolumnResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:venta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductoRegistrar">
+    <xs:sequence>
+      <xs:element name="fk_idcategoria" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="stock" type="xs:int" />
+      <xs:element name="condicion" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductoRegistrarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VentaMostrarAll">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="VentaMostrarAllResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:venta" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
