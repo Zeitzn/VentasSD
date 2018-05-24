@@ -1,42 +1,61 @@
-﻿@*@model IEnumerable<Distribuidos.VentasSD.JavaService.categoria>*@
-@model Distribuidos.VentasSD.Models.CategoriaViewModel
+﻿@model Distribuidos.VentasSD.Models.CategoriaViewModel
 
 @{
-    ViewBag.Title = "Index";
+                /**/
+
+                ViewBag.Title = "Categorías";
 }
 
-<h2>Index</h2>
+@*<p>
+    @Html.ActionLink("Create New", "Create", new { @class = "btn btn-default"})
+</p>*@
+<a href="~/Home" class="btn btn-primary btn-sm">Agregar</a>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            NOMBRE
-           
-        </th>
-        <th>
-            DESCRIPCIÓN
-            
-        </th>
-        <th></th>
-    </tr>
+<table id="datatable" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                NOMBRE
+                @*@Html.DisplayNameFor(model => model.descripcion)*@
+            </th>
+            <th>
+                DESCRIPCIÓN
+                @*@Html.DisplayNameFor(model => model.nombre)*@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
 
-@foreach (var item in Model.ListaCategoria) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.descripcion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.nombre)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
-        </td>
-    </tr>
-}
+    <tfoot>
+        <tr>
+            <th>
+                NOMBRE
+                @*@Html.DisplayNameFor(model => model.descripcion)*@
+            </th>
+            <th>
+                DESCRIPCIÓN
+                @*@Html.DisplayNameFor(model => model.nombre)*@
+            </th>
+            <th></th>
+        </tr>
+    </tfoot>
 
+    <tbody>
+        @foreach (var item in Model.ListaCategoria)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

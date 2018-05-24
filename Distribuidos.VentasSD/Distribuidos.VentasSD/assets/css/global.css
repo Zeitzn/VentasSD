@@ -1,0 +1,13 @@
+﻿body {
+}
+
+
+thead,tfoot {
+    background-color: #172D44;
+    color: #fff;
+    font-size:10px;
+}
+
+tbody{
+    font-size:10px;
+}
