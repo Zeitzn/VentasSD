@@ -6,7 +6,8 @@
 
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*@Html.ActionLink("Create New", "Create")*@
+    <a href="~/Personas/Create" class="btn btn-info btn-xs">Nuevo</a>
 </p>
 <table class="table" id="datatable">
     <thead>
@@ -150,9 +151,10 @@
             @Html.DisplayFor(modelItem => item.tipo_persona)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idpersona}) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.idpersona })*@
+            <a href="~/Personas/Edit/@item.idpersona" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-edit"></i></a>
+            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
         </td>
     </tr>
     }

@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Distribuidos.VentasSD.JavaService.producto>
+
+@{
+    ViewBag.Title = "Productos";
+}
+
+
+
+<p>
+    @*@Html.ActionLink("Nuevo producto", "Create")*@
+
+    <a href="~/Productos/Create" class="btn btn-info btn-xs">Nuevo</a>
+</p>
+<table class="table" id="datatable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.codigo)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.condicion)
+        </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.descripcion)
+            </th>
+            
+
+            @*<th>
+            @Html.DisplayNameFor(model => model.fk_idcategoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idproducto)
+        </th>*@
+
+            <th>
+                @Html.DisplayNameFor(model => model.stock)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tfoot>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.codigo)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.condicion)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.descripcion)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.fk_idcategoria)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.idproducto)
+                </th>*@
+
+            <th>
+                @Html.DisplayNameFor(model => model.stock)
+            </th>
+            <th></th>
+        </tr>
+    </tfoot>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.codigo)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.condicion)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcion)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.fk_idcategoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idproducto)
+                </td>*@
+
+            <td>
+                @Html.DisplayFor(modelItem => item.stock)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.idproducto })*@
+                <a href="~/Productos/Edit/@item.idproducto" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-edit"></i></a>
+                @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            </td>
+        </tr>
+    }
+
+</table>
