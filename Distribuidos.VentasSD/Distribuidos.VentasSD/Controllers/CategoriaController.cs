@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace Distribuidos.VentasSD.Controllers
 {
-    public class HomeController : Controller
+    public class CategoriaController : Controller
     {
         private readonly JavaService.WebServiceDCPClient java = new JavaService.WebServiceDCPClient();
         // GET: Home
@@ -19,5 +19,7 @@ namespace Distribuidos.VentasSD.Controllers
             };
             return View(cat);
         }
+
+        
     }
 }

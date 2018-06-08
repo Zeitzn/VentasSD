@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Distribuidos.VentasSD.JavaService.categoria>
+
+@{
+    ViewBag.Title = "Categorías";
+}
+
+<p>
+    @Html.ActionLink("Agregar Nuevo", "Create")
+</p>
+<table class="table" id="datatable">
+    <thead>
+        <tr>
+            <th>
+                CÓDIGO
+                @*@Html.DisplayNameFor(model => model.descripcion)*@
+            </th>
+            <th>
+                DESCRIPCIÓN
+                @*@Html.DisplayNameFor(model => model.nombre)*@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tfoot>
+        <tr>
+            <th>
+                CÓDIGO
+                @*@Html.DisplayNameFor(model => model.descripcion)*@
+            </th>
+            <th>
+                DESCRIPCIÓN
+                @*@Html.DisplayNameFor(model => model.nombre)*@
+            </th>
+            <th></th>
+        </tr>
+    </tfoot>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.id }) |               
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>

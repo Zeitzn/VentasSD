@@ -1,0 +1,160 @@
+﻿@model IEnumerable<Distribuidos.VentasSD.JavaService.persona>
+
+@{
+    ViewBag.Title = "Personas";
+}
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" id="datatable">
+    <thead>
+        <tr>
+            <th>
+                NÚMERO DE DOCUMENTO
+                @*@Html.DisplayNameFor(model => model.num_doc)*@
+            </th>
+
+            <th>
+                TIPO DE DOCUMENTO
+                @*@Html.DisplayNameFor(model => model.tipo_doc)*@
+            </th>
+
+            @*<th>
+               @Html.DisplayNameFor(model => model.idpersona)
+        </th>*@
+            <th>
+                NOMBRE
+                @*@Html.DisplayNameFor(model => model.nombre)*@
+            </th>
+
+            <th>
+                APELLIDO PATERNO
+                @*@Html.DisplayNameFor(model => model.papellido)*@
+            </th>
+            <th>
+                APELLIDO MATERNO
+                @*@Html.DisplayNameFor(model => model.sapellido)*@
+            </th>
+
+            <th>
+                DIRECCIÓN
+                @*@Html.DisplayNameFor(model => model.direccion)*@
+            </th>
+
+            <th>
+                EMAIL
+                @*@Html.DisplayNameFor(model => model.email)*@
+            </th>
+
+            <th>
+                TELÉFONO
+                @*@Html.DisplayNameFor(model => model.telefono)*@
+            </th>
+
+            <th>
+                TIPO DE PERSONA
+                @*@Html.DisplayNameFor(model => model.tipo_persona)*@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tfoot>
+        <tr>
+            <th>
+                NÚMERO DE DOCUMENTO
+                @*@Html.DisplayNameFor(model => model.num_doc)*@
+            </th>
+
+            <th>
+                TIPO DE DOCUMENTO
+                @*@Html.DisplayNameFor(model => model.tipo_doc)*@
+            </th>
+
+            @*<th>
+               @Html.DisplayNameFor(model => model.idpersona)
+        </th>*@
+            <th>
+                NOMBRE
+                @*@Html.DisplayNameFor(model => model.nombre)*@
+            </th>
+
+            <th>
+                APELLIDO PATERNO
+                @*@Html.DisplayNameFor(model => model.papellido)*@
+            </th>
+            <th>
+                APELLIDO MATERNO
+                @*@Html.DisplayNameFor(model => model.sapellido)*@
+            </th>
+
+            <th>
+                DIRECCIÓN
+                @*@Html.DisplayNameFor(model => model.direccion)*@
+            </th>
+
+            <th>
+                EMAIL
+                @*@Html.DisplayNameFor(model => model.email)*@
+            </th>
+
+            <th>
+                TELÉFONO
+                @*@Html.DisplayNameFor(model => model.telefono)*@
+            </th>
+
+            <th>
+                TIPO DE PERSONA
+                @*@Html.DisplayNameFor(model => model.tipo_persona)*@
+            </th>
+            <th></th>
+        </tr>
+    </tfoot>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_doc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_doc)
+        </td>
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.idpersona)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.papellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sapellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_persona)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idpersona}) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+    }
+
+</table>
