@@ -49,11 +49,12 @@ namespace Distribuidos.VentasSD.Controllers
 
         // POST: Categorias/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(JavaService.categoria collection)
         {
             try
             {
-                // TODO: Add update logic here
+
+                java.CategoriaActualizar(collection.id, collection.nombre, collection.descripcion);
 
                 return RedirectToAction("Index");
             }

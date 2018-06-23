@@ -47,18 +47,18 @@ namespace Distribuidos.VentasSD.Controllers
         }
 
         // GET: Productos/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string nombre)
         {
-            return View();
+            return View(java.ProductoBuscarByCodName(nombre));
         }
 
         // POST: Productos/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(JavaService.producto model)
         {
             try
             {
-                // TODO: Add update logic here
+                java.ProductoActualizar(model.idproducto, model.fk_idcategoria, model.codigo, model.nombre, model.descripcion, model.stock, model.condicion);
 
                 return RedirectToAction("Index");
             }

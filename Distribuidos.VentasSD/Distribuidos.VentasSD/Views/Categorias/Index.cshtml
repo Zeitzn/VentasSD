@@ -19,7 +19,7 @@
                 DESCRIPCIÓN
                 @*@Html.DisplayNameFor(model => model.nombre)*@
             </th>
-            <th></th>
+            @*<th></th>*@
         </tr>
     </thead>
 
@@ -33,7 +33,7 @@
                 DESCRIPCIÓN
                 @*@Html.DisplayNameFor(model => model.nombre)*@
             </th>
-            <th></th>
+            @*<th></th>*@
         </tr>
     </tfoot>
 
@@ -47,10 +47,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.nombre)
             </td>
-            <td>
+            @*<td>
                 @Html.ActionLink("Editar", "Edit", new { id = item.id }) |               
                 @Html.ActionLink("Eliminar", "Delete", new { id = item.id })
-            </td>
+            </td>*@
         </tr>
     }
 
