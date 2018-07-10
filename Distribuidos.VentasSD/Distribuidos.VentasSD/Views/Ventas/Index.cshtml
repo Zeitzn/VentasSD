@@ -1,0 +1,133 @@
+﻿@model IEnumerable<Distribuidos.VentasSD.JavaService.venta>
+@*@model Distribuidos.VentasSD.JavaService.venta*@
+
+@{
+    ViewBag.Title = "Ventas";
+}
+
+<p>
+    <a href="~/Ventas/Create" class="btn btn-info btn-xs">Nuevo</a>
+</p>
+<table class="table" id="datatable">
+    <thead >
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fk_idcliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fk_idusuario)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.idventa)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.igv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.igvSpecified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.num_comp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.serie_comp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipo_comp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.totalSpecified)
+            </th>
+            @*<th></th>*@
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fk_idcliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fk_idusuario)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.idventa)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.igv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.igvSpecified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.num_comp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.serie_comp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipo_comp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.totalSpecified)
+            </th>
+            @*<th></th>*@
+        </tr>
+    </tfoot>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.estado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fk_idcliente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fk_idusuario)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.idventa)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.igv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.igvSpecified)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.num_comp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.serie_comp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tipo_comp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.total)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.totalSpecified)
+                </td>
+                @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>*@
+            </tr>
+        }
+    </tbody>
+</table>

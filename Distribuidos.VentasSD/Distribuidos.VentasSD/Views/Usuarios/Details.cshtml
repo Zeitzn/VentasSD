@@ -1,0 +1,120 @@
+﻿@model Distribuidos.VentasSD.JavaService.usuario
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+
+<div>
+   
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.condicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.condicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idusuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idusuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num_doc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_doc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.papellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.papellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sapellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sapellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo_doc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo_doc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idusuario }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e46571af-afba-4f13-a74d-5d20a450ccf3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="260a7789-12cd-42cc-8eb9-e72b8380c887" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://huaman-pc:8080/WebServiceDCP5167868445328778764/WebServiceDCP?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WebServiceDCP.xsd" MetadataType="Schema" ID="3dc4937d-b6da-453d-af6b-5f445a64f0cd" SourceId="1" SourceUrl="http://huaman-pc:8080/WebServiceDCP5167868445328778764/WebServiceDCP?xsd=1" />
-    <MetadataFile FileName="WebServiceDCP.wsdl" MetadataType="Wsdl" ID="2bc389e9-362d-4959-9c4a-6b978bb740eb" SourceId="1" SourceUrl="http://huaman-pc:8080/WebServiceDCP5167868445328778764/WebServiceDCP?wsdl" />
+    <MetadataFile FileName="WebServiceDCP.xsd" MetadataType="Schema" ID="8a0afe76-11e1-458e-9c03-9b5686862f94" SourceId="1" SourceUrl="http://huaman-pc:8080/WebServiceDCP5167868445328778764/WebServiceDCP?xsd=1" />
+    <MetadataFile FileName="WebServiceDCP.wsdl" MetadataType="Wsdl" ID="8897b8bf-672e-43a8-be23-1f06c2284b15" SourceId="1" SourceUrl="http://huaman-pc:8080/WebServiceDCP5167868445328778764/WebServiceDCP?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

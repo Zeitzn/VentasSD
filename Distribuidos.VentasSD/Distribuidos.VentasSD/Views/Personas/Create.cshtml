@@ -88,7 +88,13 @@
     <div class="form-group">
         @Html.LabelFor(model => model.tipo_persona, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.tipo_persona, new { htmlAttributes = new { @class = "form-control" } })
+            @*@Html.EditorFor(model => model.tipo_persona, new { htmlAttributes = new { @class = "form-control" } })*@
+            <select name="tipo_persona" class="form-control">
+                <option>--Seleccionar--</option>
+                <option value="JURIDICA">Jurídica</option>
+                <option value="NATURAL">Natural</option>
+            </select>
+
             @Html.ValidationMessageFor(model => model.tipo_persona, "", new { @class = "text-danger" })
         </div>
     </div>

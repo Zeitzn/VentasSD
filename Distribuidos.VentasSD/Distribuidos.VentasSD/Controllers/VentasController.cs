@@ -6,37 +6,36 @@ using System.Web.Mvc;
 
 namespace Distribuidos.VentasSD.Controllers
 {
-    public class ProductosController : Controller
+    public class VentasController : Controller
     {
         private readonly JavaService.WebServiceDCPClient java = new JavaService.WebServiceDCPClient();
-
+        // GET: Ventas
         public ActionResult Index()
         {
-            
-            return View(java.ProductoMostrarAll());
+            return View(java.VentaMostrarAll());
         }
 
-        // GET: Productos/Details/5
+        // GET: Ventas/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(java.VentaBuscarById(id));
         }
 
-        // GET: Productos/Create
+        // GET: Ventas/Create
         public ActionResult Create()
         {
-            ViewBag.Categorias = new SelectList(java.CategoriaMostrarAll(), "id", "nombre");
+            ViewBag.ListPersonas = java.PersonaMostrarAll();
+            ViewBag.ListUsuarios = java.UsuarioMostrarAll();
             return View();
         }
 
-        // POST: Productos/Create
+        // POST: Ventas/Create
         [HttpPost]
-        public ActionResult Create(JavaService.producto model)
+        public ActionResult Create(JavaService.venta model)
         {
             try
             {
-
-                java.ProductoRegistrar(model.fk_idcategoria, model.codigo, model.nombre, model.descripcion, model.stock, model.condicion);
+                java.VentaRegistrar(model.fk_idcliente, model.fk_idusuario, model.tipo_comp, model.serie_comp, model.num_comp, (double)model.igv, (double)model.total);
 
                 return RedirectToAction("Index");
             }
@@ -46,20 +45,19 @@ namespace Distribuidos.VentasSD.Controllers
             }
         }
 
-        // GET: Productos/Edit/5
-        public ActionResult Edit(string codigo)
+        // GET: Ventas/Edit/5
+        public ActionResult Edit(int id)
         {
-            
-            return View(java.ProductoBuscarByCodName(codigo));
+            return View();
         }
 
-        // POST: Productos/Edit/5
+        // POST: Ventas/Edit/5
         [HttpPost]
-        public ActionResult Edit(JavaService.producto model)
+        public ActionResult Edit(int id, FormCollection collection)
         {
             try
             {
-                java.ProductoActualizar(model.idproducto, model.fk_idcategoria, model.codigo, model.nombre, model.descripcion, model.stock, model.condicion);
+                // TODO: Add update logic here
 
                 return RedirectToAction("Index");
             }
@@ -69,13 +67,13 @@ namespace Distribuidos.VentasSD.Controllers
             }
         }
 
-        // GET: Productos/Delete/5
+        // GET: Ventas/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Productos/Delete/5
+        // POST: Ventas/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

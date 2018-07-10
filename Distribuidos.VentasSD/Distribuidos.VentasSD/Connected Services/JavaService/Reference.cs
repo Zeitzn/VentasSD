@@ -169,6 +169,24 @@ namespace Distribuidos.VentasSD.JavaService {
         System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VerificarConexionAPostgresResponse> VerificarConexionAPostgresAsync(Distribuidos.VentasSD.JavaService.VerificarConexionAPostgresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse ProductoBuscarById(Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdResponse")]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse> ProductoBuscarByIdAsync(Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/UsuarioBuscarByIdRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/UsuarioBuscarByIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdResponse UsuarioBuscarById(Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/UsuarioBuscarByIdRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/UsuarioBuscarByIdResponse")]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdResponse> UsuarioBuscarByIdAsync(Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/sumaRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/sumaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -194,15 +212,6 @@ namespace Distribuidos.VentasSD.JavaService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/PersonaRegistrarRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/PersonaRegistrarResponse")]
         System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.PersonaRegistrarResponse> PersonaRegistrarAsync(Distribuidos.VentasSD.JavaService.PersonaRegistrarRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Distribuidos.VentasSD.JavaService.ProductoBuscarResponse ProductoBuscar(Distribuidos.VentasSD.JavaService.ProductoBuscarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarResponse")]
-        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.ProductoBuscarResponse> ProductoBuscarAsync(Distribuidos.VentasSD.JavaService.ProductoBuscarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/VentaRegistrarRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/VentaRegistrarResponse")]
@@ -233,7 +242,7 @@ namespace Distribuidos.VentasSD.JavaService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -293,7 +302,7 @@ namespace Distribuidos.VentasSD.JavaService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -423,7 +432,7 @@ namespace Distribuidos.VentasSD.JavaService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -455,7 +464,7 @@ namespace Distribuidos.VentasSD.JavaService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -641,7 +650,7 @@ namespace Distribuidos.VentasSD.JavaService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -757,7 +766,7 @@ namespace Distribuidos.VentasSD.JavaService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -915,7 +924,7 @@ namespace Distribuidos.VentasSD.JavaService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1884,6 +1893,78 @@ namespace Distribuidos.VentasSD.JavaService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProductoBuscarById", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class ProductoBuscarByIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idproducto;
+        
+        public ProductoBuscarByIdRequest() {
+        }
+        
+        public ProductoBuscarByIdRequest(int idproducto) {
+            this.idproducto = idproducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProductoBuscarByIdResponse", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class ProductoBuscarByIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Distribuidos.VentasSD.JavaService.producto @return;
+        
+        public ProductoBuscarByIdResponse() {
+        }
+        
+        public ProductoBuscarByIdResponse(Distribuidos.VentasSD.JavaService.producto @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UsuarioBuscarById", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class UsuarioBuscarByIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idusuario;
+        
+        public UsuarioBuscarByIdRequest() {
+        }
+        
+        public UsuarioBuscarByIdRequest(int idusuario) {
+            this.idusuario = idusuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UsuarioBuscarByIdResponse", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class UsuarioBuscarByIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Distribuidos.VentasSD.JavaService.usuario @return;
+        
+        public UsuarioBuscarByIdResponse() {
+        }
+        
+        public UsuarioBuscarByIdResponse(Distribuidos.VentasSD.JavaService.usuario @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="suma", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
     public partial class sumaRequest {
         
@@ -2085,42 +2166,6 @@ namespace Distribuidos.VentasSD.JavaService {
         }
         
         public PersonaRegistrarResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProductoBuscar", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
-    public partial class ProductoBuscarRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idproducto;
-        
-        public ProductoBuscarRequest() {
-        }
-        
-        public ProductoBuscarRequest(int idproducto) {
-            this.idproducto = idproducto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProductoBuscarResponse", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
-    public partial class ProductoBuscarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Distribuidos.VentasSD.JavaService.producto @return;
-        
-        public ProductoBuscarResponse() {
-        }
-        
-        public ProductoBuscarResponse(Distribuidos.VentasSD.JavaService.producto @return) {
             this.@return = @return;
         }
     }
@@ -2742,6 +2787,52 @@ namespace Distribuidos.VentasSD.JavaService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.ProductoBuscarById(Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest request) {
+            return base.Channel.ProductoBuscarById(request);
+        }
+        
+        public Distribuidos.VentasSD.JavaService.producto ProductoBuscarById(int idproducto) {
+            Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest inValue = new Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest();
+            inValue.idproducto = idproducto;
+            Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse retVal = ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).ProductoBuscarById(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse> Distribuidos.VentasSD.JavaService.WebServiceDCP.ProductoBuscarByIdAsync(Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest request) {
+            return base.Channel.ProductoBuscarByIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse> ProductoBuscarByIdAsync(int idproducto) {
+            Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest inValue = new Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest();
+            inValue.idproducto = idproducto;
+            return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).ProductoBuscarByIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.UsuarioBuscarById(Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdRequest request) {
+            return base.Channel.UsuarioBuscarById(request);
+        }
+        
+        public Distribuidos.VentasSD.JavaService.usuario UsuarioBuscarById(int idusuario) {
+            Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdRequest inValue = new Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdRequest();
+            inValue.idusuario = idusuario;
+            Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdResponse retVal = ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).UsuarioBuscarById(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdResponse> Distribuidos.VentasSD.JavaService.WebServiceDCP.UsuarioBuscarByIdAsync(Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdRequest request) {
+            return base.Channel.UsuarioBuscarByIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdResponse> UsuarioBuscarByIdAsync(int idusuario) {
+            Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdRequest inValue = new Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdRequest();
+            inValue.idusuario = idusuario;
+            return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).UsuarioBuscarByIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Distribuidos.VentasSD.JavaService.sumaResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.suma(Distribuidos.VentasSD.JavaService.sumaRequest request) {
             return base.Channel.suma(request);
         }
@@ -2848,29 +2939,6 @@ namespace Distribuidos.VentasSD.JavaService {
             inValue.telefono = telefono;
             inValue.email = email;
             return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).PersonaRegistrarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Distribuidos.VentasSD.JavaService.ProductoBuscarResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.ProductoBuscar(Distribuidos.VentasSD.JavaService.ProductoBuscarRequest request) {
-            return base.Channel.ProductoBuscar(request);
-        }
-        
-        public Distribuidos.VentasSD.JavaService.producto ProductoBuscar(int idproducto) {
-            Distribuidos.VentasSD.JavaService.ProductoBuscarRequest inValue = new Distribuidos.VentasSD.JavaService.ProductoBuscarRequest();
-            inValue.idproducto = idproducto;
-            Distribuidos.VentasSD.JavaService.ProductoBuscarResponse retVal = ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).ProductoBuscar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.ProductoBuscarResponse> Distribuidos.VentasSD.JavaService.WebServiceDCP.ProductoBuscarAsync(Distribuidos.VentasSD.JavaService.ProductoBuscarRequest request) {
-            return base.Channel.ProductoBuscarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.ProductoBuscarResponse> ProductoBuscarAsync(int idproducto) {
-            Distribuidos.VentasSD.JavaService.ProductoBuscarRequest inValue = new Distribuidos.VentasSD.JavaService.ProductoBuscarRequest();
-            inValue.idproducto = idproducto;
-            return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).ProductoBuscarAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

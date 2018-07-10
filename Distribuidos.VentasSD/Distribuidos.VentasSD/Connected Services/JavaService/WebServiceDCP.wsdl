@@ -107,6 +107,18 @@
   <message name="VerificarConexionAPostgresResponse">
     <part name="parameters" element="tns:VerificarConexionAPostgresResponse" />
   </message>
+  <message name="ProductoBuscarById">
+    <part name="parameters" element="tns:ProductoBuscarById" />
+  </message>
+  <message name="ProductoBuscarByIdResponse">
+    <part name="parameters" element="tns:ProductoBuscarByIdResponse" />
+  </message>
+  <message name="UsuarioBuscarById">
+    <part name="parameters" element="tns:UsuarioBuscarById" />
+  </message>
+  <message name="UsuarioBuscarByIdResponse">
+    <part name="parameters" element="tns:UsuarioBuscarByIdResponse" />
+  </message>
   <message name="suma">
     <part name="parameters" element="tns:suma" />
   </message>
@@ -124,12 +136,6 @@
   </message>
   <message name="PersonaRegistrarResponse">
     <part name="parameters" element="tns:PersonaRegistrarResponse" />
-  </message>
-  <message name="ProductoBuscar">
-    <part name="parameters" element="tns:ProductoBuscar" />
-  </message>
-  <message name="ProductoBuscarResponse">
-    <part name="parameters" element="tns:ProductoBuscarResponse" />
   </message>
   <message name="VentaRegistrar">
     <part name="parameters" element="tns:VentaRegistrar" />
@@ -218,6 +224,14 @@
       <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VerificarConexionAPostgresRequest" message="tns:VerificarConexionAPostgres" />
       <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VerificarConexionAPostgresResponse" message="tns:VerificarConexionAPostgresResponse" />
     </operation>
+    <operation name="ProductoBuscarById">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdRequest" message="tns:ProductoBuscarById" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdResponse" message="tns:ProductoBuscarByIdResponse" />
+    </operation>
+    <operation name="UsuarioBuscarById">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/UsuarioBuscarByIdRequest" message="tns:UsuarioBuscarById" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/UsuarioBuscarByIdResponse" message="tns:UsuarioBuscarByIdResponse" />
+    </operation>
     <operation name="suma">
       <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/sumaRequest" message="tns:suma" />
       <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/sumaResponse" message="tns:sumaResponse" />
@@ -229,10 +243,6 @@
     <operation name="PersonaRegistrar">
       <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/PersonaRegistrarRequest" message="tns:PersonaRegistrar" />
       <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/PersonaRegistrarResponse" message="tns:PersonaRegistrarResponse" />
-    </operation>
-    <operation name="ProductoBuscar">
-      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarRequest" message="tns:ProductoBuscar" />
-      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarResponse" message="tns:ProductoBuscarResponse" />
     </operation>
     <operation name="VentaRegistrar">
       <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaRegistrarRequest" message="tns:VentaRegistrar" />
@@ -402,6 +412,24 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="ProductoBuscarById">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UsuarioBuscarById">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="suma">
       <soap:operation soapAction="" />
       <input>
@@ -421,15 +449,6 @@
       </output>
     </operation>
     <operation name="PersonaRegistrar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ProductoBuscar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

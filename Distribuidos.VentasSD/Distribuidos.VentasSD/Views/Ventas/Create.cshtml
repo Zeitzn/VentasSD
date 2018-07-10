@@ -1,0 +1,332 @@
+﻿@model Distribuidos.VentasSD.JavaService.venta
+
+@{
+    ViewBag.Title = "Generar Venta";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>venta</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.estado, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.estado, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Cliente</label>
+            <div class="col-md-10">
+                <div class="col-md-9">
+                    <input type="hidden" name="fk_idcliente" id="fk_idcliente" />
+                    <input type="text" class="form-control" id="cliente" />
+                </div>
+                <div class="col-md-1 pull-left">
+                    <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#modalPersona">Seleccionar</button>
+                </div>
+                @Html.ValidationMessageFor(model => model.fk_idcliente, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Trabajador</label>
+            <div class="col-md-10">
+                <div class="col-md-9">
+                    <input type="hidden" name="fk_idusuario" id="fk_idusuario" />
+                    <input type="text" class="form-control" id="usuario" />
+                </div>
+                <div class="col-md-1 pull-left">
+                    <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#modalUsuario">Seleccionar</button>
+                </div>
+                @Html.ValidationMessageFor(model => model.fk_idusuario, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.igv, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.igv, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.igv, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.igvSpecified, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.igvSpecified)
+                    @Html.ValidationMessageFor(model => model.igvSpecified, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.num_comp, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.num_comp, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.num_comp, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.serie_comp, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.serie_comp, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.serie_comp, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.tipo_comp, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tipo_comp, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.tipo_comp, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.total, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.total, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.total, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.totalSpecified, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.totalSpecified)
+                    @Html.ValidationMessageFor(model => model.totalSpecified, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+
+
+<!-- MODAL DE CLIENTES -->
+<!-- Modal -->
+<div id="modalPersona" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">LISTA DE PERSONAS</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table" id="datatable">
+                    <thead>
+                        <tr>
+
+                            <th>
+                                NOMBRE
+                                @*@Html.DisplayNameFor(model => model.nombre)*@
+                            </th>
+
+                            <th>
+                                APELLIDO PATERNO
+                                @*@Html.DisplayNameFor(model => model.papellido)*@
+                            </th>
+                            <th>
+                                APELLIDO MATERNO
+                                @*@Html.DisplayNameFor(model => model.sapellido)*@
+                            </th>
+
+                            <th class="text-center">
+                                SELECCIONAR
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+
+                            <th>
+                                NOMBRE
+                                @*@Html.DisplayNameFor(model => model.nombre)*@
+                            </th>
+
+                            <th>
+                                APELLIDO PATERNO
+                                @*@Html.DisplayNameFor(model => model.papellido)*@
+                            </th>
+                            <th>
+                                APELLIDO MATERNO
+                                @*@Html.DisplayNameFor(model => model.sapellido)*@
+                            </th>
+
+                            <th class="text-center">
+                                SELECCIONAR
+                            </th>
+                        </tr>
+                    </tfoot>
+
+                    @foreach (var item in ViewBag.ListPersonas)
+                    {
+                        <tr>
+
+                            <td>
+                                @item.nombre
+                            </td>
+
+                            <td>
+                                @item.papellido
+                            </td>
+                            <td>
+                                @item.sapellido
+                            </td>
+
+                            <td class="text-center">
+                                <a href="#" onclick="cargarCliente(@item.idpersona,'@item.nombre','@item.papellido','@item.sapellido')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-link"></i></a>
+                            </td>
+
+
+                        </tr>
+
+                    }
+
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- MODAL DE USUARIOS -->
+<!-- Modal -->
+<div id="modalUsuario" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">LISTA DE TRABAJADORES</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table" id="datatable">
+                    <thead>
+                        <tr>
+
+                            <th>
+                                NOMBRE
+                                @*@Html.DisplayNameFor(model => model.nombre)*@
+                            </th>
+
+                            <th>
+                                APELLIDO PATERNO
+                                @*@Html.DisplayNameFor(model => model.papellido)*@
+                            </th>
+                            <th>
+                                APELLIDO MATERNO
+                                @*@Html.DisplayNameFor(model => model.sapellido)*@
+                            </th>
+
+                            <th class="text-center">
+                                SELECCIONAR
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+
+                            <th>
+                                NOMBRE
+                                @*@Html.DisplayNameFor(model => model.nombre)*@
+                            </th>
+
+                            <th>
+                                APELLIDO PATERNO
+                                @*@Html.DisplayNameFor(model => model.papellido)*@
+                            </th>
+                            <th>
+                                APELLIDO MATERNO
+                                @*@Html.DisplayNameFor(model => model.sapellido)*@
+                            </th>
+
+                            <th class="text-center">
+                                SELECCIONAR
+                            </th>
+                        </tr>
+                    </tfoot>
+
+                    @foreach (var item in ViewBag.ListUsuarios)
+                    {
+                        <tr>
+
+                            <td>
+                                @item.nombre
+                            </td>
+
+                            <td>
+                                @item.papellido
+                            </td>
+                            <td>
+                                @item.sapellido
+                            </td>
+
+                            <td class="text-center">
+                                <a href="#" onclick="cargarUsuario(@item.idusuario,'@item.nombre','@item.papellido','@item.sapellido')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-link"></i></a>
+                            </td>
+
+
+                        </tr>
+
+                    }
+
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts{
+
+    <script>
+        function cargarCliente(id, nombre, papellido, sapellido) {
+            $("#fk_idcliente").val(id);
+            $("#cliente").val(nombre + ' ' + papellido + ' ' + sapellido);
+            $('#modalPersona').modal('hide');
+            
+        }
+        function cargarUsuario(id, nombre, papellido, sapellido) {
+            $("#fk_idusuario").val(id);
+            $("#usuario").val(nombre + ' ' + papellido + ' ' + sapellido);
+            $('#modalUsuario').modal('hide');
+            
+        }
+    </script>
+}
+

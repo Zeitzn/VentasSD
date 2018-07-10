@@ -915,8 +915,6 @@
     <Content Include="assets\vendors\validator\.bower.json" />
     <Content Include="assets\vendors\validator\README.md" />
     <Content Include="assets\vendors\validator\validator.jquery.json" />
-    <None Include="Connected Services\JavaService\configuration91.svcinfo" />
-    <None Include="Connected Services\JavaService\configuration.svcinfo" />
     <Content Include="assets\build\css\custom.css" />
     <Content Include="assets\build\css\custom.min.css" />
     <Content Include="assets\build\images\back_disabled.png" />
@@ -4349,6 +4347,8 @@
     <Content Include="assets\vendors\validator\index.html" />
     <Content Include="assets\vendors\validator\multifield.js" />
     <Content Include="assets\vendors\validator\validator.js" />
+    <None Include="Connected Services\JavaService\configuration91.svcinfo" />
+    <None Include="Connected Services\JavaService\configuration.svcinfo" />
     <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.categoria.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -4397,7 +4397,7 @@
     <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.ProductoBuscarByCodNameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.ProductoBuscarResponse.datasource">
+    <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.ProductoMostrarAllResponse.datasource">
@@ -4413,6 +4413,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.UsuarioActualizarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.UsuarioMostrarAllResponse.datasource">
@@ -4448,6 +4451,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Connected Services\JavaService\WebServiceDCP.wsdl" />
+    <None Include="Connected Services\JavaService\WebServiceDCP.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -4468,6 +4475,8 @@
     <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -4476,10 +4485,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <None Include="Connected Services\JavaService\WebServiceDCP.wsdl" />
-    <None Include="Connected Services\JavaService\WebServiceDCP.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
     <Content Include="Views\Categoria\Index.cshtml" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
@@ -4496,6 +4501,13 @@
     <Content Include="Views\Productos\Index.cshtml" />
     <Content Include="Views\Productos\Create.cshtml" />
     <Content Include="Views\Productos\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Ventas\Index.cshtml" />
+    <Content Include="Views\Ventas\Details.cshtml" />
+    <Content Include="Views\Ventas\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4511,14 +4523,14 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\JavaService\" />
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="assets\vendors\devbridge-autocomplete\src\jquery.autocomplete.d.ts" />
     <TypeScriptCompile Include="assets\vendors\moment\moment.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\JavaService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

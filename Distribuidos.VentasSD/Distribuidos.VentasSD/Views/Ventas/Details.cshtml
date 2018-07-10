@@ -1,0 +1,106 @@
+﻿@model Distribuidos.VentasSD.JavaService.venta
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fk_idcliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fk_idcliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fk_idusuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fk_idusuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idventa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idventa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.igv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.igv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.igvSpecified)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.igvSpecified)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num_comp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_comp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.serie_comp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.serie_comp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo_comp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo_comp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.totalSpecified)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.totalSpecified)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
