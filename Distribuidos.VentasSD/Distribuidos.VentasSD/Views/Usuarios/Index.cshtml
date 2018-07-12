@@ -9,144 +9,130 @@
     @*@Html.ActionLink("Create New", "Create")*@
     <a href="~/Usuarios/Create" class="btn btn-info btn-xs">Nuevo</a>
 </p>
-<table class="table" id="datatable">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.cargo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.condicion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.direccion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.email)
-            </th>
-            @*<th>
-                    @Html.DisplayNameFor(model => model.idusuario)
-                </th>*@
-            <th>
-                @Html.DisplayNameFor(model => model.login)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.num_doc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.papellido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pass)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.sapellido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.telefono)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.tipo_doc)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
+<div class="table table-responsive">
+    <table class="table" id="datatable">
+        <thead>
+            <tr>
+                <th>
+                    NOMBRE
+                </th>
+                <th>
+                    APELLIDO PATERNO
+                </th>
 
-    <tfoot>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.cargo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.condicion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.direccion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.email)
-            </th>
-            @*<th>
-                    @Html.DisplayNameFor(model => model.idusuario)
-                </th>*@
-            <th>
-                @Html.DisplayNameFor(model => model.login)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.num_doc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.papellido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pass)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.sapellido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.telefono)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.tipo_doc)
-            </th>
-            <th></th>
-        </tr>
-    </tfoot>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.cargo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.condicion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.direccion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.email)
-            </td>
-            @*<td>
-                    @Html.DisplayFor(modelItem => item.idusuario)
-                </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.login)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.num_doc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.papellido)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.pass)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.sapellido)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.telefono)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.tipo_doc)
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "Edit", new { id = item.idusuario }) |
-                @Html.ActionLink("Detalles", "Details", new { id = item.idusuario }) |
-                @Html.ActionLink("Eliminar", "Delete", new { id = item.idusuario })
-            </td>
-        </tr>
-    }
+                <th>
+                    APELLIDO MATERNO
+                </th>
+                <th>
+                    USUARIO
+                </th>
+                <th>
+                    CONTRASEÑA
+                </th>
+                <th>
+                    CARGO
+                </th>
 
-</table>
+                <th>
+                    EMAIL
+                </th>
+                <th>
+                    NÚMERO DE DOCUMENTO
+                </th>
+
+                <th>
+                    TELÉFONO
+                </th>
+                <th>
+                    TIPO DE DOCUMENTO
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tfoot>
+            <tr>
+                <th>
+                    NOMBRE
+                </th>
+                <th>
+                    APELLIDO PATERNO
+                </th>
+
+                <th>
+                    APELLIDO MATERNO
+                </th>
+                <th>
+                    USUARIO
+                </th>
+                <th>
+                    CONTRASEÑA
+                </th>
+                <th>
+                    CARGO
+                </th>
+
+                <th>
+                    EMAIL
+                </th>
+                <th>
+                    NÚMERO DE DOCUMENTO
+                </th>
+
+                <th>
+                    TELÉFONO
+                </th>
+                <th>
+                    TIPO DE DOCUMENTO
+                </th>
+                <th></th>
+            </tr>
+        </tfoot>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.papellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sapellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.login)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.pass)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cargo)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.idusuario)
+                    </td>*@
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.num_doc)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tipo_doc)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.idusuario }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.idusuario })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

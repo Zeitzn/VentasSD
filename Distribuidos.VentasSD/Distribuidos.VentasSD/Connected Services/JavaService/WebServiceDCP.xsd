@@ -46,6 +46,8 @@
   <xs:element name="VentaMostrarAllResponse" type="tns:VentaMostrarAllResponse" />
   <xs:element name="VentaRegistrar" type="tns:VentaRegistrar" />
   <xs:element name="VentaRegistrarResponse" type="tns:VentaRegistrarResponse" />
+  <xs:element name="VentaUsuarioPersonaAll" type="tns:VentaUsuarioPersonaAll" />
+  <xs:element name="VentaUsuarioPersonaAllResponse" type="tns:VentaUsuarioPersonaAllResponse" />
   <xs:element name="VerificarConexionAPostgres" type="tns:VerificarConexionAPostgres" />
   <xs:element name="VerificarConexionAPostgresResponse" type="tns:VerificarConexionAPostgresResponse" />
   <xs:element name="suma" type="tns:suma" />
@@ -153,6 +155,51 @@
   <xs:complexType name="PersonaBuscarByIdResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VentaUsuarioPersonaAll">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="VentaUsuarioPersonaAllResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ventaUsuarioPersona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ventaUsuarioPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cargo_usuario" type="xs:string" />
+      <xs:element name="condicion_usuario" type="xs:boolean" />
+      <xs:element minOccurs="0" name="direccion_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion_usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="email_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="email_usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="tns:timestamp" />
+      <xs:element name="fk_idcliente" type="xs:int" />
+      <xs:element name="fk_idusuario" type="xs:int" />
+      <xs:element name="idpersona" type="xs:int" />
+      <xs:element name="idusuario" type="xs:int" />
+      <xs:element name="idventa" type="xs:int" />
+      <xs:element minOccurs="0" name="igv" type="xs:decimal" />
+      <xs:element minOccurs="0" name="login_usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre_usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="num_comp" type="xs:string" />
+      <xs:element minOccurs="0" name="num_doc_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="num_doc_usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="papellido_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="papellido_usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="pass_usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="sapellido_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="sapellido_usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="serie_comp" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono_usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_comp" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_doc_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_doc_usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_persona" type="xs:string" />
+      <xs:element minOccurs="0" name="total" type="xs:decimal" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ProductoActualizar">

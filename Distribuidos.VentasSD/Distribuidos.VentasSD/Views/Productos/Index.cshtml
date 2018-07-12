@@ -15,17 +15,17 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.codigo)
+                CÓDIGO
             </th>
 
             <th>
-                @Html.DisplayNameFor(model => model.nombre)
+                NOMBRE
             </th>
             @*<th>
             @Html.DisplayNameFor(model => model.condicion)
         </th>*@
             <th>
-                @Html.DisplayNameFor(model => model.descripcion)
+                DESCRIPCIÓN
             </th>
             
 
@@ -37,7 +37,7 @@
         </th>*@
 
             <th>
-                @Html.DisplayNameFor(model => model.stock)
+                STOCK
             </th>
             <th></th>
         </tr>
@@ -46,17 +46,17 @@
     <tfoot>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.codigo)
+                CÓDIGO
             </th>
 
             <th>
-                @Html.DisplayNameFor(model => model.nombre)
+                NOMBRE
             </th>
             @*<th>
                     @Html.DisplayNameFor(model => model.condicion)
                 </th>*@
             <th>
-                @Html.DisplayNameFor(model => model.descripcion)
+                DESCRIPCIÓN
             </th>
             @*<th>
                     @Html.DisplayNameFor(model => model.fk_idcategoria)
@@ -66,7 +66,7 @@
                 </th>*@
 
             <th>
-                @Html.DisplayNameFor(model => model.stock)
+                STOCK
             </th>
             <th></th>
         </tr>
@@ -101,7 +101,7 @@
             </td>
             <td>
                 @*@Html.ActionLink("Edit", "Edit", new { id = item.idproducto })*@
-                <a href="~/Productos/Edit/@item.codigo" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-edit"></i></a>
+                <a href="~/Productos/Edit/@item.idproducto" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-edit"></i></a>
                 @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
         @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
             </td>

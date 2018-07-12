@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\global.css" />
+    <Content Include="assets\images\logo.png" />
     <Content Include="assets\vendors\animate.css\.bower.json" />
     <Content Include="assets\vendors\animate.css\animate-config.json" />
     <Content Include="assets\vendors\animate.css\bower.json" />
@@ -4439,6 +4440,12 @@
     <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.VentaRegistrarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.ventaUsuarioPersona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.VerificarConexionAPostgresResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -4506,8 +4513,9 @@
     <Content Include="Views\Usuarios\Edit.cshtml" />
     <Content Include="Views\Usuarios\Create.cshtml" />
     <Content Include="Views\Ventas\Index.cshtml" />
-    <Content Include="Views\Ventas\Details.cshtml" />
     <Content Include="Views\Ventas\Create.cshtml" />
+    <Content Include="Views\Ventas\AsignarProducto.cshtml" />
+    <Content Include="Views\Ventas\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -16,6 +16,8 @@ namespace Distribuidos.VentasSD.Controllers
             return View(java.ProductoMostrarAll());
         }
 
+        
+
         // GET: Productos/Details/5
         public ActionResult Details(int id)
         {
@@ -47,10 +49,10 @@ namespace Distribuidos.VentasSD.Controllers
         }
 
         // GET: Productos/Edit/5
-        public ActionResult Edit(string codigo)
+        public ActionResult Edit(int id)
         {
             
-            return View(java.ProductoBuscarByCodName(codigo));
+            return View(java.ProductoBuscarById(id));
         }
 
         // POST: Productos/Edit/5

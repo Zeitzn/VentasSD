@@ -106,6 +106,15 @@ namespace Distribuidos.VentasSD.JavaService {
         System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.ProductoBuscarByCodNameResponse> ProductoBuscarByCodNameAsync(Distribuidos.VentasSD.JavaService.ProductoBuscarByCodNameRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse ProductoBuscarById(Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdResponse")]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse> ProductoBuscarByIdAsync(Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/ProductoMostrarAllRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/ProductoMostrarAllResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -169,15 +178,6 @@ namespace Distribuidos.VentasSD.JavaService {
         System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VerificarConexionAPostgresResponse> VerificarConexionAPostgresAsync(Distribuidos.VentasSD.JavaService.VerificarConexionAPostgresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse ProductoBuscarById(Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/ProductoBuscarByIdResponse")]
-        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse> ProductoBuscarByIdAsync(Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/UsuarioBuscarByIdRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/UsuarioBuscarByIdResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -239,6 +239,15 @@ namespace Distribuidos.VentasSD.JavaService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/VentaBuscarByIdRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/VentaBuscarByIdResponse")]
         System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaBuscarByIdResponse> VentaBuscarByIdAsync(Distribuidos.VentasSD.JavaService.VentaBuscarByIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse VentaUsuarioPersonaAll(Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllResponse")]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse> VentaUsuarioPersonaAllAsync(Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest request);
     }
     
     /// <remarks/>
@@ -288,6 +297,546 @@ namespace Distribuidos.VentasSD.JavaService {
             set {
                 this.nombreField = value;
                 this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.digitalcorp.com/")]
+    public partial class ventaUsuarioPersona : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string cargo_usuarioField;
+        
+        private bool condicion_usuarioField;
+        
+        private string direccion_personaField;
+        
+        private string direccion_usuarioField;
+        
+        private string email_personaField;
+        
+        private string email_usuarioField;
+        
+        private string estadoField;
+        
+        private timestamp fechaField;
+        
+        private int fk_idclienteField;
+        
+        private int fk_idusuarioField;
+        
+        private int idpersonaField;
+        
+        private int idusuarioField;
+        
+        private int idventaField;
+        
+        private decimal igvField;
+        
+        private bool igvFieldSpecified;
+        
+        private string login_usuarioField;
+        
+        private string nombre_personaField;
+        
+        private string nombre_usuarioField;
+        
+        private string num_compField;
+        
+        private string num_doc_personaField;
+        
+        private string num_doc_usuarioField;
+        
+        private string papellido_personaField;
+        
+        private string papellido_usuarioField;
+        
+        private string pass_usuarioField;
+        
+        private string sapellido_personaField;
+        
+        private string sapellido_usuarioField;
+        
+        private string serie_compField;
+        
+        private string telefono_personaField;
+        
+        private string telefono_usuarioField;
+        
+        private string tipo_compField;
+        
+        private string tipo_doc_personaField;
+        
+        private string tipo_doc_usuarioField;
+        
+        private string tipo_personaField;
+        
+        private decimal totalField;
+        
+        private bool totalFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string cargo_usuario {
+            get {
+                return this.cargo_usuarioField;
+            }
+            set {
+                this.cargo_usuarioField = value;
+                this.RaisePropertyChanged("cargo_usuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public bool condicion_usuario {
+            get {
+                return this.condicion_usuarioField;
+            }
+            set {
+                this.condicion_usuarioField = value;
+                this.RaisePropertyChanged("condicion_usuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string direccion_persona {
+            get {
+                return this.direccion_personaField;
+            }
+            set {
+                this.direccion_personaField = value;
+                this.RaisePropertyChanged("direccion_persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string direccion_usuario {
+            get {
+                return this.direccion_usuarioField;
+            }
+            set {
+                this.direccion_usuarioField = value;
+                this.RaisePropertyChanged("direccion_usuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string email_persona {
+            get {
+                return this.email_personaField;
+            }
+            set {
+                this.email_personaField = value;
+                this.RaisePropertyChanged("email_persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string email_usuario {
+            get {
+                return this.email_usuarioField;
+            }
+            set {
+                this.email_usuarioField = value;
+                this.RaisePropertyChanged("email_usuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string estado {
+            get {
+                return this.estadoField;
+            }
+            set {
+                this.estadoField = value;
+                this.RaisePropertyChanged("estado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public timestamp fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public int fk_idcliente {
+            get {
+                return this.fk_idclienteField;
+            }
+            set {
+                this.fk_idclienteField = value;
+                this.RaisePropertyChanged("fk_idcliente");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public int fk_idusuario {
+            get {
+                return this.fk_idusuarioField;
+            }
+            set {
+                this.fk_idusuarioField = value;
+                this.RaisePropertyChanged("fk_idusuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public int idpersona {
+            get {
+                return this.idpersonaField;
+            }
+            set {
+                this.idpersonaField = value;
+                this.RaisePropertyChanged("idpersona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public int idusuario {
+            get {
+                return this.idusuarioField;
+            }
+            set {
+                this.idusuarioField = value;
+                this.RaisePropertyChanged("idusuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public int idventa {
+            get {
+                return this.idventaField;
+            }
+            set {
+                this.idventaField = value;
+                this.RaisePropertyChanged("idventa");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        public decimal igv {
+            get {
+                return this.igvField;
+            }
+            set {
+                this.igvField = value;
+                this.RaisePropertyChanged("igv");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool igvSpecified {
+            get {
+                return this.igvFieldSpecified;
+            }
+            set {
+                this.igvFieldSpecified = value;
+                this.RaisePropertyChanged("igvSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        public string login_usuario {
+            get {
+                return this.login_usuarioField;
+            }
+            set {
+                this.login_usuarioField = value;
+                this.RaisePropertyChanged("login_usuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
+        public string nombre_persona {
+            get {
+                return this.nombre_personaField;
+            }
+            set {
+                this.nombre_personaField = value;
+                this.RaisePropertyChanged("nombre_persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
+        public string nombre_usuario {
+            get {
+                return this.nombre_usuarioField;
+            }
+            set {
+                this.nombre_usuarioField = value;
+                this.RaisePropertyChanged("nombre_usuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
+        public string num_comp {
+            get {
+                return this.num_compField;
+            }
+            set {
+                this.num_compField = value;
+                this.RaisePropertyChanged("num_comp");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=18)]
+        public string num_doc_persona {
+            get {
+                return this.num_doc_personaField;
+            }
+            set {
+                this.num_doc_personaField = value;
+                this.RaisePropertyChanged("num_doc_persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
+        public string num_doc_usuario {
+            get {
+                return this.num_doc_usuarioField;
+            }
+            set {
+                this.num_doc_usuarioField = value;
+                this.RaisePropertyChanged("num_doc_usuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=20)]
+        public string papellido_persona {
+            get {
+                return this.papellido_personaField;
+            }
+            set {
+                this.papellido_personaField = value;
+                this.RaisePropertyChanged("papellido_persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=21)]
+        public string papellido_usuario {
+            get {
+                return this.papellido_usuarioField;
+            }
+            set {
+                this.papellido_usuarioField = value;
+                this.RaisePropertyChanged("papellido_usuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=22)]
+        public string pass_usuario {
+            get {
+                return this.pass_usuarioField;
+            }
+            set {
+                this.pass_usuarioField = value;
+                this.RaisePropertyChanged("pass_usuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=23)]
+        public string sapellido_persona {
+            get {
+                return this.sapellido_personaField;
+            }
+            set {
+                this.sapellido_personaField = value;
+                this.RaisePropertyChanged("sapellido_persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=24)]
+        public string sapellido_usuario {
+            get {
+                return this.sapellido_usuarioField;
+            }
+            set {
+                this.sapellido_usuarioField = value;
+                this.RaisePropertyChanged("sapellido_usuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=25)]
+        public string serie_comp {
+            get {
+                return this.serie_compField;
+            }
+            set {
+                this.serie_compField = value;
+                this.RaisePropertyChanged("serie_comp");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=26)]
+        public string telefono_persona {
+            get {
+                return this.telefono_personaField;
+            }
+            set {
+                this.telefono_personaField = value;
+                this.RaisePropertyChanged("telefono_persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=27)]
+        public string telefono_usuario {
+            get {
+                return this.telefono_usuarioField;
+            }
+            set {
+                this.telefono_usuarioField = value;
+                this.RaisePropertyChanged("telefono_usuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=28)]
+        public string tipo_comp {
+            get {
+                return this.tipo_compField;
+            }
+            set {
+                this.tipo_compField = value;
+                this.RaisePropertyChanged("tipo_comp");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=29)]
+        public string tipo_doc_persona {
+            get {
+                return this.tipo_doc_personaField;
+            }
+            set {
+                this.tipo_doc_personaField = value;
+                this.RaisePropertyChanged("tipo_doc_persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=30)]
+        public string tipo_doc_usuario {
+            get {
+                return this.tipo_doc_usuarioField;
+            }
+            set {
+                this.tipo_doc_usuarioField = value;
+                this.RaisePropertyChanged("tipo_doc_usuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=31)]
+        public string tipo_persona {
+            get {
+                return this.tipo_personaField;
+            }
+            set {
+                this.tipo_personaField = value;
+                this.RaisePropertyChanged("tipo_persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=32)]
+        public decimal total {
+            get {
+                return this.totalField;
+            }
+            set {
+                this.totalField = value;
+                this.RaisePropertyChanged("total");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totalSpecified {
+            get {
+                return this.totalFieldSpecified;
+            }
+            set {
+                this.totalFieldSpecified = value;
+                this.RaisePropertyChanged("totalSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.digitalcorp.com/")]
+    public partial class timestamp : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int nanosField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int nanos {
+            get {
+                return this.nanosField;
+            }
+            set {
+                this.nanosField = value;
+                this.RaisePropertyChanged("nanos");
             }
         }
         
@@ -418,38 +967,6 @@ namespace Distribuidos.VentasSD.JavaService {
             set {
                 this.precioFieldSpecified = value;
                 this.RaisePropertyChanged("precioSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.digitalcorp.com/")]
-    public partial class timestamp : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int nanosField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int nanos {
-            get {
-                return this.nanosField;
-            }
-            set {
-                this.nanosField = value;
-                this.RaisePropertyChanged("nanos");
             }
         }
         
@@ -1637,6 +2154,42 @@ namespace Distribuidos.VentasSD.JavaService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProductoBuscarById", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class ProductoBuscarByIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idproducto;
+        
+        public ProductoBuscarByIdRequest() {
+        }
+        
+        public ProductoBuscarByIdRequest(int idproducto) {
+            this.idproducto = idproducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ProductoBuscarByIdResponse", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class ProductoBuscarByIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Distribuidos.VentasSD.JavaService.producto @return;
+        
+        public ProductoBuscarByIdResponse() {
+        }
+        
+        public ProductoBuscarByIdResponse(Distribuidos.VentasSD.JavaService.producto @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ProductoMostrarAll", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
     public partial class ProductoMostrarAllRequest {
         
@@ -1886,42 +2439,6 @@ namespace Distribuidos.VentasSD.JavaService {
         }
         
         public VerificarConexionAPostgresResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProductoBuscarById", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
-    public partial class ProductoBuscarByIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idproducto;
-        
-        public ProductoBuscarByIdRequest() {
-        }
-        
-        public ProductoBuscarByIdRequest(int idproducto) {
-            this.idproducto = idproducto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ProductoBuscarByIdResponse", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
-    public partial class ProductoBuscarByIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Distribuidos.VentasSD.JavaService.producto @return;
-        
-        public ProductoBuscarByIdResponse() {
-        }
-        
-        public ProductoBuscarByIdResponse(Distribuidos.VentasSD.JavaService.producto @return) {
             this.@return = @return;
         }
     }
@@ -2300,6 +2817,34 @@ namespace Distribuidos.VentasSD.JavaService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="VentaUsuarioPersonaAll", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class VentaUsuarioPersonaAllRequest {
+        
+        public VentaUsuarioPersonaAllRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="VentaUsuarioPersonaAllResponse", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class VentaUsuarioPersonaAllResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Distribuidos.VentasSD.JavaService.ventaUsuarioPersona[] @return;
+        
+        public VentaUsuarioPersonaAllResponse() {
+        }
+        
+        public VentaUsuarioPersonaAllResponse(Distribuidos.VentasSD.JavaService.ventaUsuarioPersona[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface WebServiceDCPChannel : Distribuidos.VentasSD.JavaService.WebServiceDCP, System.ServiceModel.IClientChannel {
     }
@@ -2622,6 +3167,29 @@ namespace Distribuidos.VentasSD.JavaService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.ProductoBuscarById(Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest request) {
+            return base.Channel.ProductoBuscarById(request);
+        }
+        
+        public Distribuidos.VentasSD.JavaService.producto ProductoBuscarById(int idproducto) {
+            Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest inValue = new Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest();
+            inValue.idproducto = idproducto;
+            Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse retVal = ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).ProductoBuscarById(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse> Distribuidos.VentasSD.JavaService.WebServiceDCP.ProductoBuscarByIdAsync(Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest request) {
+            return base.Channel.ProductoBuscarByIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse> ProductoBuscarByIdAsync(int idproducto) {
+            Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest inValue = new Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest();
+            inValue.idproducto = idproducto;
+            return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).ProductoBuscarByIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Distribuidos.VentasSD.JavaService.ProductoMostrarAllResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.ProductoMostrarAll(Distribuidos.VentasSD.JavaService.ProductoMostrarAllRequest request) {
             return base.Channel.ProductoMostrarAll(request);
         }
@@ -2784,29 +3352,6 @@ namespace Distribuidos.VentasSD.JavaService {
         public System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VerificarConexionAPostgresResponse> VerificarConexionAPostgresAsync() {
             Distribuidos.VentasSD.JavaService.VerificarConexionAPostgresRequest inValue = new Distribuidos.VentasSD.JavaService.VerificarConexionAPostgresRequest();
             return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).VerificarConexionAPostgresAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.ProductoBuscarById(Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest request) {
-            return base.Channel.ProductoBuscarById(request);
-        }
-        
-        public Distribuidos.VentasSD.JavaService.producto ProductoBuscarById(int idproducto) {
-            Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest inValue = new Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest();
-            inValue.idproducto = idproducto;
-            Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse retVal = ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).ProductoBuscarById(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse> Distribuidos.VentasSD.JavaService.WebServiceDCP.ProductoBuscarByIdAsync(Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest request) {
-            return base.Channel.ProductoBuscarByIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.ProductoBuscarByIdResponse> ProductoBuscarByIdAsync(int idproducto) {
-            Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest inValue = new Distribuidos.VentasSD.JavaService.ProductoBuscarByIdRequest();
-            inValue.idproducto = idproducto;
-            return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).ProductoBuscarByIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3018,6 +3563,27 @@ namespace Distribuidos.VentasSD.JavaService {
             Distribuidos.VentasSD.JavaService.VentaBuscarByIdRequest inValue = new Distribuidos.VentasSD.JavaService.VentaBuscarByIdRequest();
             inValue.idventa = idventa;
             return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).VentaBuscarByIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.VentaUsuarioPersonaAll(Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest request) {
+            return base.Channel.VentaUsuarioPersonaAll(request);
+        }
+        
+        public Distribuidos.VentasSD.JavaService.ventaUsuarioPersona[] VentaUsuarioPersonaAll() {
+            Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest inValue = new Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest();
+            Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse retVal = ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).VentaUsuarioPersonaAll(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse> Distribuidos.VentasSD.JavaService.WebServiceDCP.VentaUsuarioPersonaAllAsync(Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest request) {
+            return base.Channel.VentaUsuarioPersonaAllAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse> VentaUsuarioPersonaAllAsync() {
+            Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest inValue = new Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest();
+            return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).VentaUsuarioPersonaAllAsync(inValue);
         }
     }
 }

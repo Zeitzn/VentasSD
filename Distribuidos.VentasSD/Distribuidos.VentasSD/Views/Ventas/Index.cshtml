@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Distribuidos.VentasSD.JavaService.venta>
+﻿@model IEnumerable<Distribuidos.VentasSD.JavaService.ventaUsuarioPersona>
 @*@model Distribuidos.VentasSD.JavaService.venta*@
 
 @{
@@ -12,77 +12,72 @@
     <thead >
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.estado)
+               ESTADO
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.fk_idcliente)
+                CLIENTE
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.fk_idusuario)
+                USUARIO
             </th>
             @*<th>
                 @Html.DisplayNameFor(model => model.idventa)
             </th>*@
             <th>
-                @Html.DisplayNameFor(model => model.igv)
+                IGV
+            </th>
+            
+            <th>
+                NUMERO DE COMPRA
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.igvSpecified)
+                SERIE DE COMPRA
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.num_comp)
+                TIPO DE COMPRA
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.serie_comp)
+                TOTAL
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.tipo_comp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.total)
-            </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.totalSpecified)
-            </th>
-            @*<th></th>*@
+            </th>*@
+            <th></th>
         </tr>
     </thead>
     <tfoot>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.estado)
+                ESTADO
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.fk_idcliente)
+                CLIENTE
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.fk_idusuario)
+                USUARIO
             </th>
             @*<th>
-                @Html.DisplayNameFor(model => model.idventa)
-            </th>*@
+            @Html.DisplayNameFor(model => model.idventa)
+        </th>*@
             <th>
-                @Html.DisplayNameFor(model => model.igv)
+                IGV
+            </th>
+
+            <th>
+                NUMERO DE COMPRA
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.igvSpecified)
+                SERIE DE COMPRA
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.num_comp)
+                TIPO DE COMPRA
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.serie_comp)
+                TOTAL
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.tipo_comp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.total)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.totalSpecified)
-            </th>
-            @*<th></th>*@
+           
+            <th></th>
         </tr>
     </tfoot>
     <tbody>
@@ -93,10 +88,10 @@
                     @Html.DisplayFor(modelItem => item.estado)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.fk_idcliente)
+                    @Html.DisplayFor(modelItem => item.nombre_persona) @Html.DisplayFor(modelItem => item.papellido_persona) @Html.DisplayFor(modelItem => item.sapellido_persona)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.fk_idusuario)
+                    @Html.DisplayFor(modelItem => item.nombre_usuario)
                 </td>
                 @*<td>
                     @Html.DisplayFor(modelItem => item.idventa)
@@ -104,9 +99,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.igv)
                 </td>
-                <td>
+                @*<td>
                     @Html.DisplayFor(modelItem => item.igvSpecified)
-                </td>
+                </td>*@
                 <td>
                     @Html.DisplayFor(modelItem => item.num_comp)
                 </td>
@@ -119,15 +114,37 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.total)
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.totalSpecified)
-                </td>
                 @*<td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    @Html.DisplayFor(modelItem => item.totalSpecified)
                 </td>*@
+                <td>
+                    @Html.ActionLink("Asignar producto", "AsignarProducto", new { id = item.idventa }) |
+                    @Html.ActionLink("Detalles", "Details", new { id=item.idventa})
+                    @*@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                </td>
             </tr>
         }
     </tbody>
 </table>
+
+
+@section scripts{
+
+<script>
+
+    //$.ajax({
+    //    method: "get",
+    //    url: "./Ventas/mostrar",
+    //    success: function (data) {
+    //        console.log(data);
+    //    }
+
+
+
+    //})
+
+
+</script>
+
+    
+}

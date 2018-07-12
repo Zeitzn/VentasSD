@@ -1,0 +1,231 @@
+﻿@model Distribuidos.VentasSD.JavaService.venta
+@{
+    ViewBag.Title = "Asignar Producto";
+
+    //Distribuidos.VentasSD.JavaService.venta venta= ViewBag.Venta;
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+   
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Producto</label>
+        <div class="col-md-10">
+            @*@Html.EditorFor(model => model.fk_idproducto, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.fk_idproducto, "", new { @class = "text-danger" })*@
+            <div class="col-md-9">
+                <input type="hidden" name="idproducto" id="fk_idproducto" />
+                <input type="text" class="form-control" id="producto" />
+            </div>
+            <div class="col-md-1 pull-left">
+                <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#modalProducto">Seleccionar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.HiddenFor(model => model.idventa)
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Precio</label>
+        <div class="col-md-10">
+            <input type="text" class="form-control" name="precio" id="precio" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Cantidad</label>
+        <div class="col-md-10">
+            <input type="text" class="form-control" name="cantidad" id="cantidad"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Descuento</label>
+        <div class="col-md-10">
+            <input type="text" class="form-control" name="descuento" id="descuento" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">Total</label>
+        <div class="col-md-10">
+            <input type="text" class="form-control" name="total" id="total" />
+        </div>
+    </div>
+
+
+
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.precio, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.precio, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.precio, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cantidad, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cantidad, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.cantidad, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.descuento, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.descuento, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.descuento, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Volver a la lista", "Index")
+</div>
+
+
+<!-- MODAL DE PRODUCTOS -->
+<div id="modalProducto" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">LISTA DE PRODUCTOS</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table" id="datatable">
+                    <thead>
+                        <tr>
+
+                            <th>
+                                NOMBRE
+                                @*@Html.DisplayNameFor(model => model.nombre)*@
+                            </th>
+
+                            <th>
+                                DESCRIPCION
+                                @*@Html.DisplayNameFor(model => model.papellido)*@
+                            </th>                           
+
+                            <th class="text-center">
+                                SELECCIONAR
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+
+                            <th>
+                                NOMBRE
+                                @*@Html.DisplayNameFor(model => model.nombre)*@
+                            </th>
+
+                            <th>
+                               DESCRIPCION
+                            </th>
+                            
+
+                            <th class="text-center">
+                                SELECCIONAR
+                            </th>
+                        </tr>
+                    </tfoot>
+
+                    @foreach (var item in ViewBag.Productos)
+                    {
+                        <tr>
+
+                            <td>
+                                @item.nombre
+                            </td>
+
+                            <td>
+                                @item.descripcion
+                            </td>
+                            
+
+                            <td class="text-center">
+                                <a href="#" onclick="cargarProducto(@item.idproducto,'@item.nombre')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-link"></i></a>
+                            </td>
+
+
+                        </tr>
+
+                    }
+
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts{
+
+    <script>
+        function cargarProducto(id, nombre) {
+            $("#fk_idproducto").val(id);
+            $("#producto").val(nombre);
+            $('#modalProducto').modal('hide');
+
+        }
+        //function cargarUsuario(id, nombre, papellido, sapellido) {
+        //    $("#fk_idusuario").val(id);
+        //    $("#usuario").val(nombre + ' ' + papellido + ' ' + sapellido);
+        //    $('#modalUsuario').modal('hide');
+
+        //}
+
+        $("#cantidad").on("change", function () {
+            var cantidad = $("#cantidad").val();
+            var precio = $("#precio").val();
+            var descuento = $("#descuento").val();
+
+            $("#total").val(precio*cantidad-descuento);
+
+        })
+        $("#precio").on("change", function () {
+            var cantidad = $("#cantidad").val();
+            var precio = $("#precio").val();
+            var descuento = $("#descuento").val();
+
+            $("#total").val(precio * cantidad - descuento);
+
+        })
+        $("#descuento").on("change", function () {
+            var cantidad = $("#cantidad").val();
+            var precio = $("#precio").val();
+            var descuento = $("#descuento").val();
+
+            $("#total").val(precio * cantidad - descuento);
+
+        })
+    </script>
+}
+

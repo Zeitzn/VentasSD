@@ -12,13 +12,19 @@ namespace Distribuidos.VentasSD.Controllers
         // GET: Ventas
         public ActionResult Index()
         {
-            return View(java.VentaMostrarAll());
+            return View(java.VentaUsuarioPersonaAll());
+        }
+
+        public JsonResult mostrar()
+        {
+            
+            return Json(java.VentaUsuarioPersonaAll(), JsonRequestBehavior.AllowGet);
         }
 
         // GET: Ventas/Details/5
         public ActionResult Details(int id)
         {
-            return View(java.VentaBuscarById(id));
+            return View(java.DetventaBuscarByFk_idventa(id));
         }
 
         // GET: Ventas/Create
@@ -46,24 +52,30 @@ namespace Distribuidos.VentasSD.Controllers
         }
 
         // GET: Ventas/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult AsignarProducto(int id)
         {
-            return View();
+            ViewBag.Productos = java.ProductoMostrarAll();
+            //ViewBag.Venta = java.VentaBuscarById(id);
+
+            return View(java.VentaBuscarById(id));
         }
 
         // POST: Ventas/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult AsignarProducto(int idventa, int idproducto,double precio,int cantidad,double descuento)
         {
             try
             {
-                // TODO: Add update logic here
 
+                java.DetventaRegistrar(idproducto, idventa, cantidad, precio, descuento);
+               
                 return RedirectToAction("Index");
+
             }
             catch
             {
                 return View();
+
             }
         }
 

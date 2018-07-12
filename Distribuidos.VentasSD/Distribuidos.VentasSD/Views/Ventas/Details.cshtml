@@ -1,106 +1,78 @@
-﻿@model Distribuidos.VentasSD.JavaService.venta
+﻿@model IEnumerable<Distribuidos.VentasSD.JavaService.detventa>
 
 @{
-    ViewBag.Title = "Detalles";
+    ViewBag.Title = "Detalles de Venta";
 }
 
 
 
 <div>
-    
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.estado)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.estado)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.fk_idcliente)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.fk_idcliente)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.fk_idusuario)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.fk_idusuario)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.idventa)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.idventa)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.igv)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.igv)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.igvSpecified)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.igvSpecified)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.num_comp)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.num_comp)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.serie_comp)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.serie_comp)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.tipo_comp)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tipo_comp)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.total)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.total)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.totalSpecified)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.totalSpecified)
-        </dd>
-
-    </dl>
+    @Html.ActionLink("Volver a la lista", "Index")
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<table class="table">
+    <thead>
+        <tr>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.fk_idproducto)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.precio)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descuento)
+            </th>
+
+
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.fk_idproducto)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.precio)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descuento)
+            </th>
+
+
+        </tr>
+    </tfoot>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.fk_idproducto)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descuento)
+            </td>
+           
+        </tr>
+    }
+
+</table>
