@@ -8,6 +8,10 @@
   <xs:element name="CategoriaRegistrarResponse" type="tns:CategoriaRegistrarResponse" />
   <xs:element name="DetventaBuscarByFk_idventa" type="tns:DetventaBuscarByFk_idventa" />
   <xs:element name="DetventaBuscarByFk_idventaResponse" type="tns:DetventaBuscarByFk_idventaResponse" />
+  <xs:element name="DetventaProductoAll" type="tns:DetventaProductoAll" />
+  <xs:element name="DetventaProductoAllResponse" type="tns:DetventaProductoAllResponse" />
+  <xs:element name="DetventaProductoFindById" type="tns:DetventaProductoFindById" />
+  <xs:element name="DetventaProductoFindByIdResponse" type="tns:DetventaProductoFindByIdResponse" />
   <xs:element name="DetventaRegistrar" type="tns:DetventaRegistrar" />
   <xs:element name="DetventaRegistrarResponse" type="tns:DetventaRegistrarResponse" />
   <xs:element name="PersonaActualizar" type="tns:PersonaActualizar" />
@@ -42,6 +46,8 @@
   <xs:element name="VentaBuscarByAnyClolumnResponse" type="tns:VentaBuscarByAnyClolumnResponse" />
   <xs:element name="VentaBuscarById" type="tns:VentaBuscarById" />
   <xs:element name="VentaBuscarByIdResponse" type="tns:VentaBuscarByIdResponse" />
+  <xs:element name="VentaListarDetventaFindByIdVenta" type="tns:VentaListarDetventaFindByIdVenta" />
+  <xs:element name="VentaListarDetventaFindByIdVentaResponse" type="tns:VentaListarDetventaFindByIdVentaResponse" />
   <xs:element name="VentaMostrarAll" type="tns:VentaMostrarAll" />
   <xs:element name="VentaMostrarAllResponse" type="tns:VentaMostrarAllResponse" />
   <xs:element name="VentaRegistrar" type="tns:VentaRegistrar" />
@@ -70,6 +76,33 @@
       <xs:element name="fk_idcategoria" type="xs:int" />
       <xs:element name="idproducto" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="stock" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DetventaProductoFindById">
+    <xs:sequence>
+      <xs:element name="iddetalleventa" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DetventaProductoFindByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:detventaProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detventaProducto">
+    <xs:sequence>
+      <xs:element name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element name="condicion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="descuento" type="xs:decimal" />
+      <xs:element name="fk_idcategoria" type="xs:int" />
+      <xs:element name="fk_idproducto" type="xs:int" />
+      <xs:element name="fk_idventa" type="xs:int" />
+      <xs:element name="iddetventa" type="xs:int" />
+      <xs:element name="idproducto" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="precio" type="xs:decimal" />
       <xs:element name="stock" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
@@ -299,6 +332,16 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="VentaListarDetventaFindByIdVenta">
+    <xs:sequence>
+      <xs:element name="fk_idventa" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VentaListarDetventaFindByIdVentaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:detventaProducto" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="VentaBuscarByAnyClolumn">
     <xs:sequence>
       <xs:element minOccurs="0" name="nameColumn" type="xs:string" />
@@ -330,6 +373,14 @@
   <xs:complexType name="VentaMostrarAllResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:venta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DetventaProductoAll">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="DetventaProductoAllResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:detventaProducto" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="UsuarioMostrarAll">

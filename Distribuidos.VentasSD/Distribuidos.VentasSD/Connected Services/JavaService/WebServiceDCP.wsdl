@@ -119,6 +119,12 @@
   <message name="UsuarioBuscarByIdResponse">
     <part name="parameters" element="tns:UsuarioBuscarByIdResponse" />
   </message>
+  <message name="VentaUsuarioPersonaAll">
+    <part name="parameters" element="tns:VentaUsuarioPersonaAll" />
+  </message>
+  <message name="VentaUsuarioPersonaAllResponse">
+    <part name="parameters" element="tns:VentaUsuarioPersonaAllResponse" />
+  </message>
   <message name="suma">
     <part name="parameters" element="tns:suma" />
   </message>
@@ -155,11 +161,23 @@
   <message name="VentaBuscarByIdResponse">
     <part name="parameters" element="tns:VentaBuscarByIdResponse" />
   </message>
-  <message name="VentaUsuarioPersonaAll">
-    <part name="parameters" element="tns:VentaUsuarioPersonaAll" />
+  <message name="VentaListarDetventaFindByIdVenta">
+    <part name="parameters" element="tns:VentaListarDetventaFindByIdVenta" />
   </message>
-  <message name="VentaUsuarioPersonaAllResponse">
-    <part name="parameters" element="tns:VentaUsuarioPersonaAllResponse" />
+  <message name="VentaListarDetventaFindByIdVentaResponse">
+    <part name="parameters" element="tns:VentaListarDetventaFindByIdVentaResponse" />
+  </message>
+  <message name="DetventaProductoAll">
+    <part name="parameters" element="tns:DetventaProductoAll" />
+  </message>
+  <message name="DetventaProductoAllResponse">
+    <part name="parameters" element="tns:DetventaProductoAllResponse" />
+  </message>
+  <message name="DetventaProductoFindById">
+    <part name="parameters" element="tns:DetventaProductoFindById" />
+  </message>
+  <message name="DetventaProductoFindByIdResponse">
+    <part name="parameters" element="tns:DetventaProductoFindByIdResponse" />
   </message>
   <portType name="WebServiceDCP">
     <operation name="CategoriaMostrarAll">
@@ -238,6 +256,10 @@
       <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/UsuarioBuscarByIdRequest" message="tns:UsuarioBuscarById" />
       <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/UsuarioBuscarByIdResponse" message="tns:UsuarioBuscarByIdResponse" />
     </operation>
+    <operation name="VentaUsuarioPersonaAll">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllRequest" message="tns:VentaUsuarioPersonaAll" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllResponse" message="tns:VentaUsuarioPersonaAllResponse" />
+    </operation>
     <operation name="suma">
       <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/sumaRequest" message="tns:suma" />
       <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/sumaResponse" message="tns:sumaResponse" />
@@ -262,9 +284,17 @@
       <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaBuscarByIdRequest" message="tns:VentaBuscarById" />
       <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaBuscarByIdResponse" message="tns:VentaBuscarByIdResponse" />
     </operation>
-    <operation name="VentaUsuarioPersonaAll">
-      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllRequest" message="tns:VentaUsuarioPersonaAll" />
-      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllResponse" message="tns:VentaUsuarioPersonaAllResponse" />
+    <operation name="VentaListarDetventaFindByIdVenta">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaListarDetventaFindByIdVentaRequest" message="tns:VentaListarDetventaFindByIdVenta" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/VentaListarDetventaFindByIdVentaResponse" message="tns:VentaListarDetventaFindByIdVentaResponse" />
+    </operation>
+    <operation name="DetventaProductoAll">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/DetventaProductoAllRequest" message="tns:DetventaProductoAll" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/DetventaProductoAllResponse" message="tns:DetventaProductoAllResponse" />
+    </operation>
+    <operation name="DetventaProductoFindById">
+      <input wsam:Action="http://services.digitalcorp.com/WebServiceDCP/DetventaProductoFindByIdRequest" message="tns:DetventaProductoFindById" />
+      <output wsam:Action="http://services.digitalcorp.com/WebServiceDCP/DetventaProductoFindByIdResponse" message="tns:DetventaProductoFindByIdResponse" />
     </operation>
   </portType>
   <binding name="WebServiceDCPPortBinding" type="tns:WebServiceDCP">
@@ -440,6 +470,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="VentaUsuarioPersonaAll">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="suma">
       <soap:operation soapAction="" />
       <input>
@@ -494,7 +533,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="VentaUsuarioPersonaAll">
+    <operation name="VentaListarDetventaFindByIdVenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DetventaProductoAll">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DetventaProductoFindById">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

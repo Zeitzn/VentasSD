@@ -4368,6 +4368,15 @@
     <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.DetventaBuscarByFk_idventaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.detventaProducto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.DetventaProductoAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.DetventaRegistrarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -4432,6 +4441,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.VentaBuscarByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JavaService\Distribuidos.VentasSD.JavaService.VentaMostrarAllResponse.datasource">

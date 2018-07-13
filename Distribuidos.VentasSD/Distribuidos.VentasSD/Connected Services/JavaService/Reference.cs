@@ -187,6 +187,15 @@ namespace Distribuidos.VentasSD.JavaService {
         System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdResponse> UsuarioBuscarByIdAsync(Distribuidos.VentasSD.JavaService.UsuarioBuscarByIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse VentaUsuarioPersonaAll(Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllResponse")]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse> VentaUsuarioPersonaAllAsync(Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/sumaRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/sumaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -241,13 +250,35 @@ namespace Distribuidos.VentasSD.JavaService {
         System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaBuscarByIdResponse> VentaBuscarByIdAsync(Distribuidos.VentasSD.JavaService.VentaBuscarByIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/VentaListarDetventaFindByIdVentaReq" +
+            "uest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/VentaListarDetventaFindByIdVentaRes" +
+            "ponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse VentaUsuarioPersonaAll(Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest request);
+        Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaResponse VentaListarDetventaFindByIdVenta(Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/VentaUsuarioPersonaAllResponse")]
-        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse> VentaUsuarioPersonaAllAsync(Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/VentaListarDetventaFindByIdVentaReq" +
+            "uest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/VentaListarDetventaFindByIdVentaRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaResponse> VentaListarDetventaFindByIdVentaAsync(Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/DetventaProductoAllRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/DetventaProductoAllResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Distribuidos.VentasSD.JavaService.DetventaProductoAllResponse DetventaProductoAll(Distribuidos.VentasSD.JavaService.DetventaProductoAllRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/DetventaProductoAllRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/DetventaProductoAllResponse")]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.DetventaProductoAllResponse> DetventaProductoAllAsync(Distribuidos.VentasSD.JavaService.DetventaProductoAllRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/DetventaProductoFindByIdRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/DetventaProductoFindByIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdResponse DetventaProductoFindById(Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.digitalcorp.com/WebServiceDCP/DetventaProductoFindByIdRequest", ReplyAction="http://services.digitalcorp.com/WebServiceDCP/DetventaProductoFindByIdResponse")]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdResponse> DetventaProductoFindByIdAsync(Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdRequest request);
     }
     
     /// <remarks/>
@@ -297,6 +328,234 @@ namespace Distribuidos.VentasSD.JavaService {
             set {
                 this.nombreField = value;
                 this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.digitalcorp.com/")]
+    public partial class detventaProducto : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int cantidadField;
+        
+        private string codigoField;
+        
+        private bool condicionField;
+        
+        private string descripcionField;
+        
+        private decimal descuentoField;
+        
+        private bool descuentoFieldSpecified;
+        
+        private int fk_idcategoriaField;
+        
+        private int fk_idproductoField;
+        
+        private int fk_idventaField;
+        
+        private int iddetventaField;
+        
+        private int idproductoField;
+        
+        private string nombreField;
+        
+        private decimal precioField;
+        
+        private bool precioFieldSpecified;
+        
+        private int stockField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int cantidad {
+            get {
+                return this.cantidadField;
+            }
+            set {
+                this.cantidadField = value;
+                this.RaisePropertyChanged("cantidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string codigo {
+            get {
+                return this.codigoField;
+            }
+            set {
+                this.codigoField = value;
+                this.RaisePropertyChanged("codigo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public bool condicion {
+            get {
+                return this.condicionField;
+            }
+            set {
+                this.condicionField = value;
+                this.RaisePropertyChanged("condicion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public decimal descuento {
+            get {
+                return this.descuentoField;
+            }
+            set {
+                this.descuentoField = value;
+                this.RaisePropertyChanged("descuento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool descuentoSpecified {
+            get {
+                return this.descuentoFieldSpecified;
+            }
+            set {
+                this.descuentoFieldSpecified = value;
+                this.RaisePropertyChanged("descuentoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int fk_idcategoria {
+            get {
+                return this.fk_idcategoriaField;
+            }
+            set {
+                this.fk_idcategoriaField = value;
+                this.RaisePropertyChanged("fk_idcategoria");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int fk_idproducto {
+            get {
+                return this.fk_idproductoField;
+            }
+            set {
+                this.fk_idproductoField = value;
+                this.RaisePropertyChanged("fk_idproducto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int fk_idventa {
+            get {
+                return this.fk_idventaField;
+            }
+            set {
+                this.fk_idventaField = value;
+                this.RaisePropertyChanged("fk_idventa");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public int iddetventa {
+            get {
+                return this.iddetventaField;
+            }
+            set {
+                this.iddetventaField = value;
+                this.RaisePropertyChanged("iddetventa");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public int idproducto {
+            get {
+                return this.idproductoField;
+            }
+            set {
+                this.idproductoField = value;
+                this.RaisePropertyChanged("idproducto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public decimal precio {
+            get {
+                return this.precioField;
+            }
+            set {
+                this.precioField = value;
+                this.RaisePropertyChanged("precio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool precioSpecified {
+            get {
+                return this.precioFieldSpecified;
+            }
+            set {
+                this.precioFieldSpecified = value;
+                this.RaisePropertyChanged("precioSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public int stock {
+            get {
+                return this.stockField;
+            }
+            set {
+                this.stockField = value;
+                this.RaisePropertyChanged("stock");
             }
         }
         
@@ -2482,6 +2741,34 @@ namespace Distribuidos.VentasSD.JavaService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="VentaUsuarioPersonaAll", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class VentaUsuarioPersonaAllRequest {
+        
+        public VentaUsuarioPersonaAllRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="VentaUsuarioPersonaAllResponse", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class VentaUsuarioPersonaAllResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Distribuidos.VentasSD.JavaService.ventaUsuarioPersona[] @return;
+        
+        public VentaUsuarioPersonaAllResponse() {
+        }
+        
+        public VentaUsuarioPersonaAllResponse(Distribuidos.VentasSD.JavaService.ventaUsuarioPersona[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="suma", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
     public partial class sumaRequest {
         
@@ -2820,27 +3107,99 @@ namespace Distribuidos.VentasSD.JavaService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="VentaUsuarioPersonaAll", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
-    public partial class VentaUsuarioPersonaAllRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="VentaListarDetventaFindByIdVenta", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class VentaListarDetventaFindByIdVentaRequest {
         
-        public VentaUsuarioPersonaAllRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int fk_idventa;
+        
+        public VentaListarDetventaFindByIdVentaRequest() {
+        }
+        
+        public VentaListarDetventaFindByIdVentaRequest(int fk_idventa) {
+            this.fk_idventa = fk_idventa;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="VentaUsuarioPersonaAllResponse", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
-    public partial class VentaUsuarioPersonaAllResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="VentaListarDetventaFindByIdVentaResponse", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class VentaListarDetventaFindByIdVentaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Distribuidos.VentasSD.JavaService.ventaUsuarioPersona[] @return;
+        public Distribuidos.VentasSD.JavaService.detventaProducto[] @return;
         
-        public VentaUsuarioPersonaAllResponse() {
+        public VentaListarDetventaFindByIdVentaResponse() {
         }
         
-        public VentaUsuarioPersonaAllResponse(Distribuidos.VentasSD.JavaService.ventaUsuarioPersona[] @return) {
+        public VentaListarDetventaFindByIdVentaResponse(Distribuidos.VentasSD.JavaService.detventaProducto[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DetventaProductoAll", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class DetventaProductoAllRequest {
+        
+        public DetventaProductoAllRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DetventaProductoAllResponse", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class DetventaProductoAllResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Distribuidos.VentasSD.JavaService.detventaProducto[] @return;
+        
+        public DetventaProductoAllResponse() {
+        }
+        
+        public DetventaProductoAllResponse(Distribuidos.VentasSD.JavaService.detventaProducto[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DetventaProductoFindById", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class DetventaProductoFindByIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int iddetalleventa;
+        
+        public DetventaProductoFindByIdRequest() {
+        }
+        
+        public DetventaProductoFindByIdRequest(int iddetalleventa) {
+            this.iddetalleventa = iddetalleventa;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DetventaProductoFindByIdResponse", WrapperNamespace="http://services.digitalcorp.com/", IsWrapped=true)]
+    public partial class DetventaProductoFindByIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.digitalcorp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public Distribuidos.VentasSD.JavaService.detventaProducto @return;
+        
+        public DetventaProductoFindByIdResponse() {
+        }
+        
+        public DetventaProductoFindByIdResponse(Distribuidos.VentasSD.JavaService.detventaProducto @return) {
             this.@return = @return;
         }
     }
@@ -3378,6 +3737,27 @@ namespace Distribuidos.VentasSD.JavaService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.VentaUsuarioPersonaAll(Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest request) {
+            return base.Channel.VentaUsuarioPersonaAll(request);
+        }
+        
+        public Distribuidos.VentasSD.JavaService.ventaUsuarioPersona[] VentaUsuarioPersonaAll() {
+            Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest inValue = new Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest();
+            Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse retVal = ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).VentaUsuarioPersonaAll(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse> Distribuidos.VentasSD.JavaService.WebServiceDCP.VentaUsuarioPersonaAllAsync(Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest request) {
+            return base.Channel.VentaUsuarioPersonaAllAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse> VentaUsuarioPersonaAllAsync() {
+            Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest inValue = new Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest();
+            return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).VentaUsuarioPersonaAllAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Distribuidos.VentasSD.JavaService.sumaResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.suma(Distribuidos.VentasSD.JavaService.sumaRequest request) {
             return base.Channel.suma(request);
         }
@@ -3566,24 +3946,70 @@ namespace Distribuidos.VentasSD.JavaService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.VentaUsuarioPersonaAll(Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest request) {
-            return base.Channel.VentaUsuarioPersonaAll(request);
+        Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.VentaListarDetventaFindByIdVenta(Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaRequest request) {
+            return base.Channel.VentaListarDetventaFindByIdVenta(request);
         }
         
-        public Distribuidos.VentasSD.JavaService.ventaUsuarioPersona[] VentaUsuarioPersonaAll() {
-            Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest inValue = new Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest();
-            Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse retVal = ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).VentaUsuarioPersonaAll(inValue);
+        public Distribuidos.VentasSD.JavaService.detventaProducto[] VentaListarDetventaFindByIdVenta(int fk_idventa) {
+            Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaRequest inValue = new Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaRequest();
+            inValue.fk_idventa = fk_idventa;
+            Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaResponse retVal = ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).VentaListarDetventaFindByIdVenta(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse> Distribuidos.VentasSD.JavaService.WebServiceDCP.VentaUsuarioPersonaAllAsync(Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest request) {
-            return base.Channel.VentaUsuarioPersonaAllAsync(request);
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaResponse> Distribuidos.VentasSD.JavaService.WebServiceDCP.VentaListarDetventaFindByIdVentaAsync(Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaRequest request) {
+            return base.Channel.VentaListarDetventaFindByIdVentaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllResponse> VentaUsuarioPersonaAllAsync() {
-            Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest inValue = new Distribuidos.VentasSD.JavaService.VentaUsuarioPersonaAllRequest();
-            return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).VentaUsuarioPersonaAllAsync(inValue);
+        public System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaResponse> VentaListarDetventaFindByIdVentaAsync(int fk_idventa) {
+            Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaRequest inValue = new Distribuidos.VentasSD.JavaService.VentaListarDetventaFindByIdVentaRequest();
+            inValue.fk_idventa = fk_idventa;
+            return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).VentaListarDetventaFindByIdVentaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Distribuidos.VentasSD.JavaService.DetventaProductoAllResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.DetventaProductoAll(Distribuidos.VentasSD.JavaService.DetventaProductoAllRequest request) {
+            return base.Channel.DetventaProductoAll(request);
+        }
+        
+        public Distribuidos.VentasSD.JavaService.detventaProducto[] DetventaProductoAll() {
+            Distribuidos.VentasSD.JavaService.DetventaProductoAllRequest inValue = new Distribuidos.VentasSD.JavaService.DetventaProductoAllRequest();
+            Distribuidos.VentasSD.JavaService.DetventaProductoAllResponse retVal = ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).DetventaProductoAll(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.DetventaProductoAllResponse> Distribuidos.VentasSD.JavaService.WebServiceDCP.DetventaProductoAllAsync(Distribuidos.VentasSD.JavaService.DetventaProductoAllRequest request) {
+            return base.Channel.DetventaProductoAllAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.DetventaProductoAllResponse> DetventaProductoAllAsync() {
+            Distribuidos.VentasSD.JavaService.DetventaProductoAllRequest inValue = new Distribuidos.VentasSD.JavaService.DetventaProductoAllRequest();
+            return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).DetventaProductoAllAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdResponse Distribuidos.VentasSD.JavaService.WebServiceDCP.DetventaProductoFindById(Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdRequest request) {
+            return base.Channel.DetventaProductoFindById(request);
+        }
+        
+        public Distribuidos.VentasSD.JavaService.detventaProducto DetventaProductoFindById(int iddetalleventa) {
+            Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdRequest inValue = new Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdRequest();
+            inValue.iddetalleventa = iddetalleventa;
+            Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdResponse retVal = ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).DetventaProductoFindById(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdResponse> Distribuidos.VentasSD.JavaService.WebServiceDCP.DetventaProductoFindByIdAsync(Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdRequest request) {
+            return base.Channel.DetventaProductoFindByIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdResponse> DetventaProductoFindByIdAsync(int iddetalleventa) {
+            Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdRequest inValue = new Distribuidos.VentasSD.JavaService.DetventaProductoFindByIdRequest();
+            inValue.iddetalleventa = iddetalleventa;
+            return ((Distribuidos.VentasSD.JavaService.WebServiceDCP)(this)).DetventaProductoFindByIdAsync(inValue);
         }
     }
 }

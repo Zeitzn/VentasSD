@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Distribuidos.VentasSD.JavaService.detventa>
+﻿@model IEnumerable<Distribuidos.VentasSD.JavaService.detventaProducto>
 
 @{
     ViewBag.Title = "Detalles de Venta";
@@ -15,19 +15,20 @@
 
 
             <th>
-                @Html.DisplayNameFor(model => model.fk_idproducto)
+                PRODUCTO
             </th>
 
             <th>
-                @Html.DisplayNameFor(model => model.precio)
+                PRECIO
             </th>
 
             <th>
-                @Html.DisplayNameFor(model => model.cantidad)
+                CANTIDAD
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.descuento)
+                DESCUENTO
             </th>
+            
 
 
         </tr>
@@ -35,22 +36,21 @@
     <tfoot>
         <tr>
 
-
             <th>
-                @Html.DisplayNameFor(model => model.fk_idproducto)
+                PRODUCTO
             </th>
 
             <th>
-                @Html.DisplayNameFor(model => model.precio)
+                PRECIO
             </th>
 
             <th>
-                @Html.DisplayNameFor(model => model.cantidad)
+                CANTIDAD
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.descuento)
+                DESCUENTO
             </th>
-
+            
 
         </tr>
     </tfoot>
@@ -59,20 +59,56 @@
         <tr>
 
             <td>
-                @Html.DisplayFor(modelItem => item.fk_idproducto)
+                <div>
+                    @Html.DisplayFor(modelItem => item.nombre)
+                </div>
+
             </td>
 
             <td>
-                @Html.DisplayFor(modelItem => item.precio)
+                <div id="td_precio_@item.iddetventa">
+                    @Html.DisplayFor(modelItem => item.precio)
+                </div>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.cantidad)
+                <div id="td_cantidad_@item.iddetventa">
+                    @Html.DisplayFor(modelItem => item.cantidad)
+                </div>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.descuento)
+                <div id="td_descuento_@item.iddetventa">
+                    @Html.DisplayFor(modelItem => item.descuento)
+                </div>
             </td>
+            
+
+
+        </tr>       
            
-        </tr>
+
+
     }
 
 </table>
+
+@*@section scripts{*@
+
+@*<script>
+
+    function total(id) {
+
+        var precio = $("#td_precio_" + id).text();
+        var cantidad = $("#td_cantidad_" + id).text();
+        var descuento = $("#td_descuento_" + id).text();
+
+        var total = precio * cantidad - descuento;
+
+
+        $("#td_total_" + id).html(id);
+    }
+
+
+
+</script>*@
+
+@* } *@

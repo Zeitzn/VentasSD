@@ -12,19 +12,21 @@ namespace Distribuidos.VentasSD.Controllers
         // GET: Ventas
         public ActionResult Index()
         {
+           
             return View(java.VentaUsuarioPersonaAll());
         }
 
-        public JsonResult mostrar()
+        public JsonResult mostrar(int id)
         {
             
-            return Json(java.VentaUsuarioPersonaAll(), JsonRequestBehavior.AllowGet);
+            return Json(java.DetventaProductoFindById(id), JsonRequestBehavior.AllowGet);
         }
 
         // GET: Ventas/Details/5
         public ActionResult Details(int id)
         {
-            return View(java.DetventaBuscarByFk_idventa(id));
+            return View(java.VentaListarDetventaFindByIdVenta(id));
+            //return View(java.DetventaProductoFindById(id));
         }
 
         // GET: Ventas/Create
